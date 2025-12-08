@@ -3,3 +3,5 @@ Voici notre magnifique groupe github pour le projet des stmg
 ## Regarder les sites html:
 J'ai pas trouvé alors que j'ai cherché
 https://AlbanNSI.github.io/STR/
+## Pour télécharger tout,
+Il faut utiliser ce site https://download-directory.github.io/ puis copier le liens du site
