@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #000000;
+  background: #F4F4F4;
   color: black;
 }
 
@@ -156,4 +156,5 @@ footer {
     color: white;
     padding: 40px;
     margin-top: 50px;
+
 
