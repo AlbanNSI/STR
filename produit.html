@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>produit – Strik3r</title>
+  <link rel="stylesheet" href="produit.css">
+  <script defer src="produit.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="bar" onclick="openMenu()">☰</div>
+</nav>
+
+<aside id="menu" class="side-menu">
+  <span class="close-arrow" onclick="closeMenu()">←</span>
+  <ul>
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">Produits</a></li>
+    <li><a href="#">Valeurs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</aside>
+
+<div id="overlay" onclick="closeMenu()"></div>
+
+
+<header class="header">
+  <img src="logo.png" alt="Logo Strik3r" class="logo">
+  <p class="slogan">Votre but a porté de main</p>
+</header>
+
+<main class="gallery">
+
+  <div class="card">
+    <img src="image1.jpg" alt="">
+    <div class="overlay-text">Info 1</div>
+  </div>
+
+  <div class="card">
+    <img src="image2.jpg" alt="">
+    <div class="overlay-text">info 2</div>
+  </div>
+
+  <div class="card">
+    <img src="image3.jpg" alt="">
+    <div class="overlay-text">Info 3</div>
+  </div>
+
+</main>
+
+
+<button class="scroll-top" onclick="scrollToTop()">
+<img src="fleche.png" alt="Retour en haut">
+</button>
+
+<footer>
+  <p>56/70 Rue du Perron à Oullins 69600</p>
+  <p>contact@strik3r.fr</p>
+  <a href="https://www.instagram.com/strik3r2025/" target="_blank">
+    <img src="instagram.png" alt="Instagram" class="insta">
+  </a>
+</footer>
+
+</body>
+</html>

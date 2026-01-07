@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F5FFFA;
+}
+
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.bar {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.side-menu {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: white;
+  transition: 0.3s;
+  z-index: 1001;
+  padding-top: 50px;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 15px;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.close-arrow {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: #F5FFFA;
+  text-align: center;
+  padding: 20px;
+  z-index: 900;
+}
+
+.logo {
+  height: 80px;
+}
+
+.slogan {
+  font-style: italic;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 20px;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background: grey;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.overlay-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover img {
+  filter: blur(4px);
+}
+
+.card:hover .overlay-text {
+  opacity: 1;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.scroll-top img {
+  width: 40px;      # taille de la fleche 
+  height: auto;
+}
+
+.scroll-top img:hover {       # cool 
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.insta {
+  width: 30px;
+  margin-top: 10px;
+}
