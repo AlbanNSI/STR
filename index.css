@@ -85,7 +85,7 @@ h1
 }
 
 .menu-lateral li {
-  margin: 20px 0;
+  margin:  0;
 }
 
 .menu-lateral a {
@@ -261,4 +261,5 @@ a:hover {
 .insta {
   width: 30px;
   margin-top: 10px;
+
 }
