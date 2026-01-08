@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function nextSlide() {
         index = (index + 1) % images.length;
         updateCarousel();
+        console.log("Slide changed to index:", index);
     }
 
     function prevSlide() {
