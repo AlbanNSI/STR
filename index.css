@@ -25,6 +25,12 @@ h1
   font-weight: bold;
 }
 
+.logoimage{
+  width:120px;
+  height:80px;
+  margin-right: 20px;
+}
+
 .burger {
   font-size: 28px;
   cursor: pointer;
