@@ -30,7 +30,8 @@ h1
 .logoimage{
   width:120px;
   height:80px;
-  margin-right: 20px;
+  margin-right: 50px;
+  align-items: center;
 }
 
 .burger {
