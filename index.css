@@ -315,3 +315,109 @@ a:hover {
   font-size: 50px;
   color: white;
 }
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* LOGO */
+.logo-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.logo {
+  width: 180px;
+}
+
+/* SECTION VALEURS */
+.valeurs {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.valeurs h1 {
+  margin-bottom: 50px;
+}
+
+.valeurs-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.valeur {
+  flex: 1;
+}
+
+.valeur h2 {
+  margin-bottom: 15px;
+}
+
+.valeur p {
+  line-height: 1.6;
+}
+
+.note {
+  margin-top: 50px;
+  font-style: italic;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0b2239;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 80px;
+}
+
+footer a {
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.insta {
+  width: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.scroll-top img {
+  width: 40px;
+}
+
+
+@media (max-width: 900px) {
+  .valeurs-container {
+    flex-direction: column;
+  }
+}
+
+
