@@ -424,6 +424,26 @@ footer a:hover {
   margin-bottom: 30px;
 }
 
+.map-container {
+  width: 70%;
+  margin: 0 auto; /* centre horizontalement */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+}
+
+/* Responsive mobile */
+@media (max-width: 900px) {
+  .map-container {
+    width: 100%;
+  }
+}
+
+
+
 
 
 
