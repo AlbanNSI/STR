@@ -424,13 +424,15 @@ footer a:hover {
   margin-bottom: 60px;
 }
 body {
-  transform: translateX(100%);
-  transition: transform 0.5s ease;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 body.loaded {
-  transform: translateX(0);
+  opacity: 1;
 }
+
+
 
 
 
