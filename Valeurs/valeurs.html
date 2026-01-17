@@ -2,110 +2,107 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <title>Valeurs – Strik3r</title>
   <link rel="stylesheet" href="../index.css">
-  <title> Valeurs – Strik3r</title>
-  <script src="../script_menu.js"></script>
+  <script src="../script_menu.js" defer></script>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="burger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- MENU LATÉRAL -->
 <aside id="menu-lateral" class="menu-lateral">
   <div class="menu-header">
-
     <span class="close-arrow" onclick="closeMenu()">✕</span>
   </div>
   <ul>
     <li><a href="../index.html">Accueil</a></li>
-	<li><a href="../actualite.html">Actualités</a></li>
+    <li><a href="../actualite.html">Actualités</a></li>
     <li><a href="../Produit/produit.html">Produits</a></li>
-    <li><a href="../A_propos/A_propos.html">A propos de nous</a></li>
+    <li><a href="../A_propos/A_propos.html">À propos de nous</a></li>
   </ul>
 </aside>
 
 <div id="overlay" onclick="closeMenu()"></div>
-	
-<center>
-  <img src="../Image/logo.png" class="logo"></a>
-<h1>Nos valeurs</h1>
-</center>
-<br><br><br>
 
-    <table>
-        <tr class="bande">
-            <td>
-                <h2><center>
-                Esprit d'équipe
-                </center></h2>
-            </td>
-            <td>
-                <h2><center>
-                Excellence
-                </center></h2>
-            </td>
-            <td>
-                <h2><center>
-                    Épanouissement
-                </center></h2>
-            </td>
-        </tr>
-        <tr>
-            <td><center>
-                <p>Nous sommes une entreprise soudée qui est prête à aider chacun des différents services en
-cas de besoin.</p></center>
-            </td>
-            <td><center>
-                <p>
-                    Nous souhaitons fournir les résultats à la hauteur des espérances de nos clients et
-                    partenaires. 
-                    L'excellence pour nous, c’est viser la perfection tout en restant ouvert à
-                    l’apprentissage continu, afin de toujours faire mieux.
-                </p></center>
-            </td>
-            <td><center>
-                <p>
-                    Nous mettons un point d’honneur à créer un environnement où chacun peut s’exprimer,
-apprendre et évoluer.
-                </p></center>
-            </td>
-        </tr>
-    </table>
+<!-- LOGO -->
+<div class="logo-container">
+  <img src="../Image/logo.png" class="logo" alt="Logo Strik3r">
+</div>
 
-<br><br><br><br>
-<center>
-<p>Ces 3 valeurs forment trois E, ce qui correspond au chiffre “3” à la place du “e” dans le nom
-de notre entreprise.</p>
-</center>
-	
-<button class="scroll-top" onclick="scrollToTop()">
-<img src="../Image/fleche.png" alt="Retour en haut">
-</button>
-	
+<!-- SECTION VALEURS -->
+<section class="valeurs">
+  <h1>Nos valeurs</h1>
 
-<footer>
-    <h3>CONTACT</h3>
-
-    <p>Email : <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a></p>
-
-    <p class="social">
-        <a href="https://instagram.com/strik3r2025" target="_blank"><img src="../Image/instagram.png" class="insta">Instagram : strik3r2025</a>
-    </p>
-
-    <p>
-        Adresse : 56/70 Rue du Perron  
-        <br>69600 Oullins-Pierre-Bénite, France
-    </p>
-
-    <div class="copyright">
-        © 2025 — Tous droits réservés
+  <div class="valeurs-container">
+    <div class="valeur">
+      <h2>Esprit d'équipe</h2>
+      <p>
+        Nous sommes une entreprise soudée qui est prête à aider chacun des
+        différents services en cas de besoin.
+      </p>
     </div>
+
+    <div class="valeur">
+      <h2>Excellence</h2>
+      <p>
+        Nous souhaitons fournir les résultats à la hauteur des espérances de
+        nos clients et partenaires. L'excellence pour nous, c’est viser la
+        perfection tout en restant ouvert à l’apprentissage continu.
+      </p>
+    </div>
+
+    <div class="valeur">
+      <h2>Épanouissement</h2>
+      <p>
+        Nous mettons un point d’honneur à créer un environnement où chacun peut
+        s’exprimer, apprendre et évoluer.
+      </p>
+    </div>
+  </div>
+
+  <p class="note">
+    Ces 3 valeurs forment trois E, ce qui correspond au chiffre “3” à la place
+    du “e” dans le nom de notre entreprise.
+  </p>
+</section>
+
+<!-- BOUTON RETOUR EN HAUT -->
+<button class="scroll-top" onclick="scrollToTop()">
+  <img src="../Image/fleche.png" alt="Retour en haut">
+</button>
+
+<!-- FOOTER -->
+<footer>
+  <h3>CONTACT</h3>
+
+  <p>Email :
+    <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
+  </p>
+
+  <p class="social">
+    <a href="https://instagram.com/strik3r2025" target="_blank">
+      <img src="../Image/instagram.png" class="insta" alt="Instagram">
+      Instagram : strik3r2025
+    </a>
+  </p>
+
+  <p>
+    Adresse : 56/70 Rue du Perron<br>
+    69600 Oullins-Pierre-Bénite, France
+  </p>
+
+  <div class="copyright">
+    © 2025 — Tous droits réservés
+  </div>
 </footer>
 
-
-
 </body>
-
-
+</html>
 
 
 
