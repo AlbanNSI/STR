@@ -28,22 +28,25 @@ L.marker([45.7181, 4.8084])
 .openPopup();
   });
 -------------
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("loaded");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("loaded");
   });
 
-document.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", e => {
-    const href = link.getAttribute("href");
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href");
 
-    if (href && !href.startsWith("#") && !href.startsWith("http")) {
-      e.preventDefault();
-      document.body.classList.remove("loaded");
-      setTimeout(() => {
-        window.location.href = href;
-      }, 500);
-    }
+      if (href && !href.startsWith("#") && !href.startsWith("http")) {
+        e.preventDefault();
+        document.body.classList.remove("loaded");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500);
+      }
+    });
   });
-});
+
+
 
 
