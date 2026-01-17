@@ -423,14 +423,7 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
-body {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
 
-body.loaded {
-  opacity: 0.2;
-}
 
 
 
