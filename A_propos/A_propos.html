@@ -2,16 +2,20 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <title>À propos – Strik3r</title>
   <link rel="stylesheet" href="../index.css">
-  <title> A propos – Strik3r</title>
-  <script src="../script_menu.js"></script>
+  <link rel="stylesheet" href="A_propos.css">
+  <script src="../script_menu.js" defer></script>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="burger" onclick="toggleMenu()">☰</div>
 </nav>
 
+<!-- MENU LATERAL -->
 <aside id="menu-lateral" class="menu-lateral">
   <div class="menu-header">
     <span class="close-arrow" onclick="closeMenu()">✕</span>
@@ -26,38 +30,79 @@
 
 <div id="overlay" onclick="closeMenu()"></div>
 
+<!-- HEADER -->
+<header class="hero">
+  <div style="text-align:center;">
+    <img src="../Image/logo.png" class="logo" alt="Logo Strik3r">
+    <h1>À propos de nous</h1>
+    <p class="slogan">STRIK3R : Votre but à portée de main</p>
+  </div>
+</header>
 
-<center>
-  <img src="../Image/logo.png" class="logo"></a>
-  <h1><strong>A propos de nous</strong></h1> 
-  <h1 <font size="10 "class="slogan">Votre but à portée de main </font> </h1>
-</center>
+<!-- CONTENU -->
+<section class="content">
 
+  <h2>L’aventure STRIK3R : Qui sommes-nous ?</h2>
 
-<script src="script.js"></script>
-</body>
-</html>
+  <p>
+    Bienvenue dans l'univers de <strong>Strik3r</strong> !  
+    Plus qu'une simple entreprise, nous sommes une équipe de choc née de
+    l'imagination des élèves de <strong>1ère STMG (promo 2025-2026)</strong>
+    du <strong>Lycée Saint-Thomas d'Aquin à Oullins</strong>.
+  </p>
 
-    <meta charset="utf-8">
-    <title>Mini Entreprise : Strik3r</title>
-    <link rel="stylesheet" href="A_propos.css">
-</head>
+  <p>
+    Lancés dans l'aventure du concours <strong>« Entreprendre pour Apprendre »</strong>,
+    nous avons décidé de transformer l'essai en créant des <strong>kits voyage uniques</strong>,
+    conçus à partir de <strong>matériaux recyclés</strong>.
+    Parce que pour nous, explorer le monde ne devrait jamais se faire
+    au détriment de la planète.
+  </p>
 
-<body>
+  <h3>Nos piliers</h3>
 
-    <header class="hero">
-        <div style="text-align: center;">
-          <img src="Orga.png" alt="Organigramme de Strik3r">
-        </div>
-        
-    </header>
+  <ul class="piliers">
+    <li><strong>L’Excellence</strong> : On ne fait pas les choses à moitié.</li>
+    <li><strong>L’Esprit d’Équipe</strong> : Seuls on va vite, avec la 1ère STMG on va loin !</li>
+    <li><strong>L’Épanouissement</strong> : On s'éclate dans ce qu'on fait, et ça se voit dans nos produits.</li>
+  </ul>
 
-    <section class="content">
-        <p style="text-align: center;">
-            Strik3r est une mini-entreprise créée par des élèves motivés,
-            spécialisée dans des projets innovants et modernes.
-		</p>
-    </section>
+  <h3>Nos objectifs : votre prochain départ commence ici</h3>
+
+  <p class="citation">
+    “STRIK3R : Votre but à portée de main”
+  </p>
+
+  <p>
+    On s’est posé une question simple : <strong>qui n’a jamais rêvé d’évasion ?</strong>  
+    Le voyage, c’est universel, c’est le partage, c’est la vie !
+  </p>
+
+  <p>
+    Notre mission ? Vous proposer un <strong>produit original, travaillé et de haute qualité</strong>.
+    Nous avons mis l’<strong>excellence au cœur de notre ADN</strong> pour que chaque box
+    dépasse vos attentes.
+  </p>
+
+  <p>
+    On ne vous vend pas juste un objet, on vous prépare le terrain
+    pour vos futurs souvenirs.
+  </p>
+
+  <p class="conclusion">
+    <strong>Votre satisfaction, c'est notre plus beau voyage.</strong>
+  </p>
+
+</section>
+
+<!-- ORGANIGRAMME -->
+<header class="hero">
+  <div style="text-align:center;">
+    <img src="Orga.png" alt="Organigramme de Strik3r">
+  </div>
+</header>
+
+<!-- MAP -->
 <section class="map-section">
   <h2>Nous trouver – Lycée Saint-Thomas d'Aquin</h2>
 
@@ -66,32 +111,38 @@
     width="100%"
     height="400"
     style="border:0;"
-    allowfullscreen=""
     loading="lazy">
   </iframe>
 </section>
 
+<!-- BOUTON HAUT -->
 <button class="scroll-top" onclick="scrollToTop()">
-<img src="../Image/fleche.png" alt="Retour en haut">
+  <img src="../Image/fleche.png" alt="Retour en haut">
 </button>
-	
-    <footer>
-    <h3>CONTACT</h3>
 
-    <p>Email : <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a></p>
+<!-- FOOTER -->
+<footer>
+  <h3>CONTACT</h3>
 
-    <p class="social">
-        <a href="https://instagram.com/strik3r2025" target="_blank"><img src="../Image/instagram.png" class="insta">Instagram : strik3r2025</a>
-    </p>
+  <p>Email :
+    <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
+  </p>
 
-    <p>
-        Adresse : 56/70 Rue du Perron  
-        <br>69600 Oullins-Pierre-Bénite, France
-    </p>
+  <p class="social">
+    <a href="https://instagram.com/strik3r2025" target="_blank">
+      <img src="../Image/instagram.png" class="insta">
+      Instagram : strik3r2025
+    </a>
+  </p>
 
-    <div class="copyright">
-        © 2025 — Tous droits réservés
-    </div>
+  <p>
+    Adresse : 56/70 Rue du Perron  
+    <br>69600 Oullins-Pierre-Bénite, France
+  </p>
+
+  <div class="copyright">
+    © 2025 — Tous droits réservés
+  </div>
 </footer>
 
 </body>
