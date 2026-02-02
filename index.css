@@ -11,9 +11,16 @@ h1
   color : #082640;
   font-size : 30px;
 }
-
+.entete h1{
+  color:#082640;
+  font-weight: bold;
+}
+.entete h2{
+  color:#082640;
+  font-style: italic;
+}
 .default p {
-    margin: 0px 50px 0px 0px;
+  margin-left: 80px;
 }
 
 .navbar {
@@ -273,6 +280,13 @@ a:hover {
   background: grey;
   overflow: hidden;
 }
+.card_actualite {
+  position: relative;
+  width: 500px;
+  height: 350px;
+  background: #e4e4e4;
+  overflow: hidden;
+}
 
 .card img {
   width: 100%;
@@ -428,6 +442,10 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
+
+
+
+
 
 
 
