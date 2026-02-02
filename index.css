@@ -11,7 +11,13 @@ h1
   color : #082640;
   font-size : 30px;
 }
-
+.entete h1{
+  color:#082640;
+  font-weight: bold;
+}
+.entete h2{
+  color:#082640;
+}
 .default p {
     margin: 0px 50px 0px 0px;
 }
@@ -428,6 +434,7 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
+
 
 
 
