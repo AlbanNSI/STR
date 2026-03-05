@@ -6,6 +6,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+img{
+	widght: 60%;
+}
 
 body {
     background-color: #f5f7fa;
@@ -122,4 +125,5 @@ a:hover {
         width: 90%;
     }
 }
+
 
