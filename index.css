@@ -4,9 +4,14 @@ body {
   background: #e4e4e4;
   color: black;
 }
-
-h1
-{
+.p4{
+  text-align : left;
+}
+.img4{
+  margin-left : 1200px;
+  width : 300px;
+}
+h1{
   font-family : "Arial";
   color : #082640;
   font-size : 45px;
