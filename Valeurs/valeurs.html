@@ -36,6 +36,23 @@ spline-viewer {
   z-index: -1;
 }
 
+  .hero-3d {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* visible seulement sur le premier écran */
+  overflow: hidden;
+}
+
+.hero-3d iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
   
 img {
   width: 120px;
@@ -130,7 +147,7 @@ p{
   
 <center>
 <div>
-  <spline-viewer url="https://prod.spline.design/IhOVrtyiHQIx-J5x/scene.splinecode"></spline-viewer>
+  <spline-viewer class="hero-3d" url="https://prod.spline.design/IhOVrtyiHQIx-J5x/scene.splinecode"></spline-viewer>
   <h1>Nos valeurs</h1> 
   <h2>Votre but à portée de main</h2>
 </div>
@@ -216,6 +233,7 @@ p{
 
 </body>
 </html>
+
 
 
 
