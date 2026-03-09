@@ -10,13 +10,29 @@
 <body>
 
 <style>
-  img{
-    width: 120px;
-  }
 
-  p{
-    font-size: 120px;
+img {
+  width: 120px;
+}
+
+.objet {
+  height: 100px;
+  animation: rotation 5s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+p{
+  font-size: 20px;
+}
+
 </style>
   
 
@@ -30,7 +46,7 @@
   </div>
   <ul>
     <li><a href="../index.html">Accueil</a></li>
-    <li><a href="../actualite.html">Actualités</a></li>
+    <li><a href="../Actualite/actualite.html">Actualités</a></li>
     <li><a href="../Produit/produit.html">Produits</a></li>
     <li><a href="../A_propos/A_propos.html">À propos de nous</a></li>
   </ul>
@@ -48,7 +64,7 @@
   <h2>Votre but à portée de main</h2>
 </center>
 
-<br>
+<br><br>
 
 <center>
   <div class="valeurs-container">
@@ -63,7 +79,7 @@
 
     <div class="valeur">
       <h2>Excellence</h2>
-      <img src="../Image/excellence.png">
+      <img src="../Image/excellence.png" class="objet">
       <p>
         Nous souhaitons fournir les résultats à la hauteur des espérances de
         nos clients et partenaires. L'excellence pour nous, c’est viser la
@@ -118,6 +134,11 @@
 
 </body>
 </html>
+
+
+
+
+
 
 
 
