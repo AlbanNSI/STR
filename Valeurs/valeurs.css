@@ -5,6 +5,21 @@ body {
   color: black;
   
 }
+
+#esprit {
+  background-color:#fc0303;
+}
+
+#excellence {
+  background-color:#fcc203;
+}
+
+#epanouissement{
+  background-color:#0307fc;
+}
+
+
+
 h1
 {
   font-family : "Arial";
@@ -442,6 +457,7 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
+
 
 
 
