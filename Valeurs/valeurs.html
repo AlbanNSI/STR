@@ -19,20 +19,18 @@
 
 <script>
   const viewer1 = document.getElementById('viewer1');
-
-  viewer1.addEventListener('load', () => {
-    const objet = viewer1.getObjectByName('NomDeTonObjet');
-
-    if (objet) {
-      function animer() {
-        objet.rotation.y += 0.01;
-        requestAnimationFrame(animer);
-      }
-      animer();
-    } else {
-      console.error("Objet non trouvé dans viewer1");
+viewer1.addEventListener('load', () => {
+  const objets = viewer1.getObjects();
+  if (objets.length > 0) {
+    const premierObjet = objets[0];
+    function animer() {
+      premierObjet.rotation.y += 0.01;
+      requestAnimationFrame(animer);
     }
-  });
+    animer();
+  }
+});
+
 </script>
 
 <div class="content">
@@ -231,6 +229,7 @@ p{
 
 </body>
 </html>
+
 
 
 
