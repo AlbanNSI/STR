@@ -6,7 +6,7 @@ body {
   
 }
 
-#esprit {
+h2{
   background:#fc0303;
 }
 
@@ -457,6 +457,7 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
+
 
 
 
