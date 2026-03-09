@@ -2,10 +2,10 @@
 body, html {
   margin: 0;
   padding: 0;
-  background: transparent !important; /* supprimer tout fond */
-  color: white !important;
+  background: transparent !important; /* voir le fond Spline */
+  color: white !important;            /* texte blanc */
   font-family: Arial, sans-serif;
-  text-align: center;
+  text-align: center !important;      /* centrer tout le contenu */
 }
 
 /* Fond 3D Spline */
@@ -23,13 +23,65 @@ body, html {
   height: 100% !important;
 }
 
-/* NAVBAR et menus */
-.navbar, .menu-lateral, #overlay {
+/* Enlever les fonds de toutes les sections */
+header.hero div,
+.content,
+.valeurs,
+.map-section,
+footer,
+.card,
+.card_actualite,
+.menu-lateral {
   background: transparent !important;
   color: white !important;
+  text-align: center !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  border-radius: 0 !important;
 }
 
-.navbar * {
+/* Titres et paragraphes */
+h1, h2, h3, h4, h5, h6, p, li {
+  color: white !important;
+  text-align: center !important;
+  margin: 10px auto !important;
+  line-height: 1.6 !important;
+}
+
+/* Images centrées et sans fond */
+img {
+  display: block !important;
+  margin: 20px auto !important;
+  background: transparent !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Liens */
+a {
+  color: #4da6ff !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* Overlay texte sur les cards (optionnel pour lisibilité) */
+.overlay-text {
+  background: transparent !important;
+  color: white !important;
+  text-align: center !important;
+}
+
+/* Bouton scroll-top */
+.scroll-top img {
+  width: 40px !important;
+}
+
+/* Navbar et menu */
+.navbar, .navbar *, .burger {
+  background: transparent !important;
   color: white !important;
 }
 
@@ -44,67 +96,10 @@ body, html {
   color: white !important;
 }
 
-/* HEADER et contenu */
-header.hero div, .content, .valeurs, .map-section, footer {
-  background: transparent !important;
-  color: white !important;
-  text-align: center !important;
-  margin: 0 auto !important;
-  padding: 20px !important;
-}
-
-/* Paragraphes et titres */
-h1, h2, h3, h4, h5, h6, p {
-  color: white !important;
-  text-align: center !important;
-  margin: 10px auto !important;
-  line-height: 1.6 !important;
-}
-
-/* Images */
-img {
-  display: block !important;
-  margin: 20px auto !important;
-  background: transparent !important;
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-/* Cards */
-.card, .card_actualite {
-  background: transparent !important;
-  color: white !important;
-  text-align: center !important;
-}
-
-.overlay-text {
-  background: rgba(0,0,0,0.5) !important; /* optionnel pour lisibilité */
-  color: white !important;
-  text-align: center !important;
-}
-
-/* Footer liens */
-footer a {
-  color: #4da6ff !important;
-  text-decoration: none !important;
-}
-
-footer a:hover {
-  text-decoration: underline !important;
-}
-
-/* Scroll-top */
-.scroll-top img {
-  width: 40px !important;
-}
-
 /* Responsive */
 @media (max-width: 900px) {
   .valeurs-container, .gallery {
     flex-direction: column !important;
     align-items: center !important;
-  }
-  .default p, .valeur p {
-    margin-left: 0 !important;
   }
 }
