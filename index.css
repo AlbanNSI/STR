@@ -52,7 +52,6 @@ h1
   cursor: pointer;
   margin-right: 20px;
 }
-
 .menu-lateral {
   position: fixed;
   top: 0;
@@ -442,6 +441,7 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
+
 
 
 
