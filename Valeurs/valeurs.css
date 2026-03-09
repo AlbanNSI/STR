@@ -7,15 +7,15 @@ body {
 }
 
 #esprit {
-  background-color:#fc0303;
+  background:#fc0303;
 }
 
 #excellence {
-  background-color:#fcc203;
+  background:#fcc203;
 }
 
 #epanouissement{
-  background-color:#0307fc;
+  background:#0307fc;
 }
 
 
@@ -457,6 +457,7 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
+
 
 
 
