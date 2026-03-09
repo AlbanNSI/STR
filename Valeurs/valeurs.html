@@ -15,23 +15,6 @@
 
 <body>
 <spline-viewer  url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
-<spline-viewer id="viewer1" url="https://prod.spline.design/fnYvPYTG-4BmfQpH/scene.splinecode"></spline-viewer>
-
-<script>
-  const viewer1 = document.getElementById('viewer1');
-viewer1.addEventListener('load', () => {
-  const objets = viewer1.getObjects();
-  if (objets.length > 0) {
-    const premierObjet = objets[0];
-    function animer() {
-      premierObjet.rotation.y += 0.01;
-      requestAnimationFrame(animer);
-    }
-    animer();
-  }
-});
-
-</script>
 
 <div class="content">
 <style>
@@ -229,6 +212,7 @@ p{
 
 </body>
 </html>
+
 
 
 
