@@ -15,9 +15,26 @@
 
 <body>
 <spline-viewer  url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
-<spline-viewer class="2" url="https://prod.spline.design/fnYvPYTG-4BmfQpH/scene.splinecode"></spline-viewer>
+<spline-viewer id="viewer1" url="https://prod.spline.design/fnYvPYTG-4BmfQpH/scene.splinecode"></spline-viewer>
 
-  
+<script>
+  const viewer1 = document.getElementById('viewer1');
+
+  viewer1.addEventListener('load', () => {
+    const objet = viewer1.getObjectByName('NomDeTonObjet');
+
+    if (objet) {
+      function animer() {
+        objet.rotation.y += 0.01;
+        requestAnimationFrame(animer);
+      }
+      animer();
+    } else {
+      console.error("Objet non trouvé dans viewer1");
+    }
+  });
+</script>
+
 <div class="content">
 <style>
 
@@ -214,6 +231,7 @@ p{
 
 </body>
 </html>
+
 
 
 
