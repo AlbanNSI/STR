@@ -7,8 +7,13 @@
   <script src="../script_menu.js" defer></script>
 </head>
 
-<body>
 
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
+
+<body>
+<spline-viewer url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
+
+  
 <div class="content">
 <style>
 
@@ -20,6 +25,14 @@ hr {
   background: linear-gradient(to right, transparent, #333, transparent);
 }
 
+  spline-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
   
 img {
@@ -197,6 +210,7 @@ p{
 
 </body>
 </html>
+
 
 
 
