@@ -24,7 +24,7 @@ h1
 }
 
 .navbar {
-  background: #F5FFFA;
+  background: #0b2239;
   padding: 15px 20px;
   display: flex;
   align-items: center;
@@ -51,6 +51,7 @@ h1
   font-size: 28px;
   cursor: pointer;
   margin-right: 20px;
+  color : red;
 }
 .menu-lateral {
   position: fixed;

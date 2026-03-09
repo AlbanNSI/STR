@@ -3,8 +3,8 @@ body {
   font-family: Arial, sans-serif;
   background: #e4e4e4;
   color: black;
+  
 }
-
 h1
 {
   font-family : "Arial";
@@ -442,6 +442,9 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
+
+
+
 
 
 

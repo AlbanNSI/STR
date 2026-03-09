@@ -9,6 +9,7 @@
 
 <body>
 
+<div class="content">
 <style>
 
 img {
@@ -17,15 +18,23 @@ img {
 
 .objet {
   height: 100px;
-  animation: rotation 5s linear infinite;
+}
+
+.objet:hover {
+  animation: rotation 2s linear infinite;
 }
 
 @keyframes rotation {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+
+  40% {
+    transform: rotate(330deg); /* rotation rapide */
+  }
+
+  100% {
+    transform: rotate(360deg); /* pause */
   }
 }
 
@@ -68,16 +77,16 @@ p{
 
 <center>
   <div class="valeurs-container">
-    <div class="valeur">
+    <div class="valeur1">
       <h2>Esprit d'équipe</h2>
-      <img src="../Image/esprit_equipe.png">
+      <img src="../Image/esprit_equipe.png" class="objet">
       <p>
         Nous sommes une entreprise soudée qui est prête à aider chacun des
         différents services en cas de besoin.
       </p>
     </div>
 
-    <div class="valeur">
+    <div class="valeur2">
       <h2>Excellence</h2>
       <img src="../Image/excellence.png" class="objet">
       <p>
@@ -87,9 +96,9 @@ p{
       </p>
     </div>
 
-    <div class="valeur">
+    <div class="valeur3">
       <h2>Épanouissement</h2>
-      <img src="../Image/epanouissemnt.png">
+      <img src="../Image/epanouissemnt.png" class="objet">
       <p>
         Nous mettons un point d’honneur à créer un environnement où chacun peut
         s’exprimer, apprendre et évoluer.
@@ -134,6 +143,15 @@ p{
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 

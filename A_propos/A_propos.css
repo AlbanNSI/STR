@@ -4,7 +4,27 @@ body {
   background: #e4e4e4;
   color: black;
 }
+/* Background Spline */
 
+.spline-background{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.spline-background spline-viewer{
+  width:100%;
+  height:100%;
+}
+
+/* rendre le site transparent pour voir le fond */
+
+body{
+  background: transparent;
+}
 h1
 {
   font-family : "Arial";
@@ -442,6 +462,7 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
+
 
 
 
