@@ -5,150 +5,187 @@
   <title>À propos – Strik3r</title>
   <link rel="stylesheet" href="../index.css">
   <script src="../script_menu.js" defer></script>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.67/build/spline-viewer.js"></script>
+  <style>
+    /* Fond Spline plein écran derrière tout */
+    .spline-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .spline-background spline-viewer {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Tout le contenu du site au-dessus */
+    body * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Fonds semi-transparents pour voir la 3D derrière */
+    .navbar {
+      background: rgba(245, 255, 250, 0.9);
+    }
+    .content {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 12px;
+    }
+    header.hero div {
+      background: rgba(255,255,255,0.8);
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+    footer {
+      background: rgba(8,38,64,0.9);
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="burger" onclick="toggleMenu()">☰</div>
-</nav>
-
-<!-- MENU LATERAL -->
-<aside id="menu-lateral" class="menu-lateral">
-  <div class="menu-header">
-    <span class="close-arrow" onclick="closeMenu()">✕</span>
+  <!-- FOND 3D Spline -->
+  <div class="spline-background">
+    <spline-viewer url="https://prod.spline.design/5dDNnZRZRvGZgbzb/scene.splinecode"></spline-viewer>
   </div>
-  <ul>
-    <li><a href="../index.html">Accueil</a></li>
-    <li><a href="../Actualite/actualite.html">Actualité</a></li>
-    <li><a href="../Valeurs/valeurs.html">Valeurs</a></li>
-    <li><a href="../Produit/produit.html">Produit</a></li>
-  </ul>
-</aside>
 
-<div id="overlay" onclick="closeMenu()"></div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="burger" onclick="toggleMenu()">☰</div>
+  </nav>
 
-<!-- HEADER -->
-<header class="hero">
-  <div style="text-align:center;">
-    <a href="../index.html"><img src="../Image/logo.png" class="logo"></a>
-    <h1>À propos de nous</h1>
-    <p class="slogan">STRIK3R : Votre but à portée de main</p>
-  </div>
-</header>
-<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.67/build/spline-viewer.js"></script>
+  <!-- MENU LATERAL -->
+  <aside id="menu-lateral" class="menu-lateral">
+    <div class="menu-header">
+      <span class="close-arrow" onclick="closeMenu()">✕</span>
+    </div>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="../Actualite/actualite.html">Actualité</a></li>
+      <li><a href="../Valeurs/valeurs.html">Valeurs</a></li>
+      <li><a href="../Produit/produit.html">Produit</a></li>
+    </ul>
+  </aside>
 
-<div class="spline-background">
-  <spline-viewer url="https://prod.spline.design/5dDNnZRZRvGZgbzb/scene.splinecode"></spline-viewer>
-</div> 
-<!-- CONTENU -->
-<section class="content">
+  <div id="overlay" onclick="closeMenu()"></div>
 
-  <h2>L’aventure STRIK3R : Qui sommes-nous ?</h2>
-  <div class="default">
-  <p>
-    Bienvenue dans l'univers de <strong>Strik3r</strong> !  
-    Plus qu'une simple entreprise, nous sommes une équipe de choc née de
-    l'imagination des élèves de <strong>1ère STMG (promo 2025-2026)</strong>
-    du <strong>Lycée Saint-Thomas d'Aquin à Oullins</strong>.
-  </p>
+  <!-- HEADER -->
+  <header class="hero">
+    <div style="text-align:center;">
+      <a href="../index.html"><img src="../Image/logo.png" class="logo"></a>
+      <h1>À propos de nous</h1>
+      <p class="slogan">STRIK3R : Votre but à portée de main</p>
+    </div>
+  </header>
 
-  <p>
-    Lancés dans l'aventure du concours <strong>« Entreprendre pour Apprendre »</strong>,
-    nous avons décidé de transformer l'essai en créant des <strong>kits voyage uniques</strong>,
-    conçus à partir de <strong>matériaux recyclés</strong>.
-    Parce que pour nous, explorer le monde ne devrait jamais se faire
-    au détriment de la planète.
-  </p>
+  <!-- CONTENU -->
+  <section class="content">
 
-  </div>
-  <h3>Nos piliers</h3>
+    <h2>L’aventure STRIK3R : Qui sommes-nous ?</h2>
+    <div class="default">
+      <p>
+        Bienvenue dans l'univers de <strong>Strik3r</strong> !  
+        Plus qu'une simple entreprise, nous sommes une équipe de choc née de
+        l'imagination des élèves de <strong>1ère STMG (promo 2025-2026)</strong>
+        du <strong>Lycée Saint-Thomas d'Aquin à Oullins</strong>.
+      </p>
 
-  <ul class="piliers">
-    <li><strong>L’Excellence</strong> : On ne fait pas les choses à moitié.</li>
-    <li><strong>L’Esprit d’Équipe</strong> : Seuls on va vite, avec la 1ère STMG on va loin !</li>
-    <li><strong>L’Épanouissement</strong> : On s'éclate dans ce qu'on fait, et ça se voit dans nos produits.</li>
-  </ul>
+      <p>
+        Lancés dans l'aventure du concours <strong>« Entreprendre pour Apprendre »</strong>,
+        nous avons décidé de transformer l'essai en créant des <strong>kits voyage uniques</strong>,
+        conçus à partir de <strong>matériaux recyclés</strong>.
+        Parce que pour nous, explorer le monde ne devrait jamais se faire
+        au détriment de la planète.
+      </p>
+    </div>
 
-  <h3>Nos objectifs : votre prochain départ commence ici</h3>
+    <h3>Nos piliers</h3>
+    <ul class="piliers">
+      <li><strong>L’Excellence</strong> : On ne fait pas les choses à moitié.</li>
+      <li><strong>L’Esprit d’Équipe</strong> : Seuls on va vite, avec la 1ère STMG on va loin !</li>
+      <li><strong>L’Épanouissement</strong> : On s'éclate dans ce qu'on fait, et ça se voit dans nos produits.</li>
+    </ul>
 
-  <p class="citation">
-    “STRIK3R : Votre but à portée de main”
-  </p>
+    <h3>Nos objectifs : votre prochain départ commence ici</h3>
+    <p class="citation">“STRIK3R : Votre but à portée de main”</p>
 
-  <p>
-    On s’est posé une question simple : <strong>qui n’a jamais rêvé d’évasion ?</strong>  
-    Le voyage, c’est universel, c’est le partage, c’est la vie !
-  </p>
+    <p>
+      On s’est posé une question simple : <strong>qui n’a jamais rêvé d’évasion ?</strong>  
+      Le voyage, c’est universel, c’est le partage, c’est la vie !
+    </p>
 
-  <p>
-    Notre mission ? Vous proposer un <strong>produit original, travaillé et de haute qualité</strong>.
-    Nous avons mis l’<strong>excellence au cœur de notre ADN</strong> pour que chaque box
-    dépasse vos attentes.
-  </p>
+    <p>
+      Notre mission ? Vous proposer un <strong>produit original, travaillé et de haute qualité</strong>.
+      Nous avons mis l’<strong>excellence au cœur de notre ADN</strong> pour que chaque box
+      dépasse vos attentes.
+    </p>
 
-  <p>
-    On ne vous vend pas juste un objet, on vous prépare le terrain
-    pour vos futurs souvenirs.
-  </p>
+    <p>
+      On ne vous vend pas juste un objet, on vous prépare le terrain
+      pour vos futurs souvenirs.
+    </p>
 
-  <p class="conclusion">
-    <strong>Votre satisfaction, c'est notre plus beau voyage.</strong>
-  </p>
+    <p class="conclusion">
+      <strong>Votre satisfaction, c'est notre plus beau voyage.</strong>
+    </p>
 
-</section>
+  </section>
 
-<!-- ORGANIGRAMME -->
-<header class="hero">
-  <div style="text-align:center;">
-    <img src="Orga.png" alt="Organigramme de Strik3r">
-  </div>
-</header>
+  <!-- ORGANIGRAMME -->
+  <header class="hero">
+    <div style="text-align:center;">
+      <img src="Orga.png" alt="Organigramme de Strik3r">
+    </div>
+  </header>
 
-<!-- MAP -->
-<section class="map-section">
-  <h2>Nous trouver – Lycée Saint-Thomas d'Aquin</h2>
+  <!-- MAP -->
+  <section class="map-section">
+    <h2>Nous trouver – Lycée Saint-Thomas d'Aquin</h2>
+    <iframe
+      src="https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed"
+      width="100%"
+      height="400"
+      style="border:0;"
+      loading="lazy">
+    </iframe>
+  </section>
 
-  <iframe
-    src="https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed"
-    width="100%"
-    height="400"
-    style="border:0;"
-    loading="lazy">
-  </iframe>
-  
-</section>
+  <!-- BOUTON HAUT -->
+  <button class="scroll-top" onclick="scrollToTop()">
+    <img src="../Image/fleche.png" alt="Retour en haut">
+  </button>
 
-<!-- BOUTON HAUT -->
-<button class="scroll-top" onclick="scrollToTop()">
-  <img src="../Image/fleche.png" alt="Retour en haut">
-</button>
+  <!-- FOOTER -->
+  <footer>
+    <h3>CONTACT</h3>
 
-<!-- FOOTER -->
-<footer>
-  <h3>CONTACT</h3>
+    <p>Email :
+      <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
+    </p>
 
-  <p>Email :
-    <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
-  </p>
+    <p class="social">
+      <a href="https://instagram.com/strik3r2025" target="_blank">
+        <img src="../Image/instagram.png" class="insta">
+        Instagram : strik3r2025
+      </a>
+    </p>
 
-  <p class="social">
-    <a href="https://instagram.com/strik3r2025" target="_blank">
-      <img src="../Image/instagram.png" class="insta">
-      Instagram : strik3r2025
-    </a>
-  </p>
+    <p>
+      Adresse : 56/70 Rue du Perron  
+      <br>69600 Oullins-Pierre-Bénite, France
+    </p>
 
-  <p>
-    Adresse : 56/70 Rue du Perron  
-    <br>69600 Oullins-Pierre-Bénite, France
-  </p>
-
-  <div class="copyright">
-    © 2025 — Tous droits réservés
-  </div>
-</footer>
+    <div class="copyright">
+      © 2025 — Tous droits réservés
+    </div>
+  </footer>
 
 </body>
 </html>
