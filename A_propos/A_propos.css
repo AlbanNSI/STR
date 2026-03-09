@@ -1,159 +1,110 @@
-/* === Réinitialisation et fond 3D === */
-body {
+/* === Fond Spline === */
+body, html {
   margin: 0;
+  padding: 0;
+  background: transparent !important; /* supprimer tout fond */
+  color: white !important;
   font-family: Arial, sans-serif;
-  background: transparent; /* voir le fond Spline */
-  color: white;             /* tout le texte en blanc */
-  text-align: center;       /* centrer par défaut tout le contenu */
+  text-align: center;
 }
 
-/* Fond Spline */
-.spline-background{
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
+/* Fond 3D Spline */
+.spline-background {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1 !important;
 }
 
-.spline-background spline-viewer{
-  width:100%;
-  height:100%;
+.spline-background spline-viewer {
+  width: 100% !important;
+  height: 100% !important;
 }
 
-/* Enlever les marges par défaut des titres et paragraphes */
-h1, h2, h3, h4, h5, h6, p {
-  margin: 10px 0;
+/* NAVBAR et menus */
+.navbar, .menu-lateral, #overlay {
+  background: transparent !important;
+  color: white !important;
 }
 
-/* Enlever le fond des conteneurs */
-.navbar, .content, .hero div, .menu-lateral, footer {
-  background: transparent;
-}
-
-/* Navbar centrée et texte blanc */
-.navbar {
-  padding: 15px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.navbar .burger {
-  color: white;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* Menu latéral et liens */
-.menu-lateral {
-  background: rgba(0,0,0,0.7); /* léger semi-transparent pour lisibilité */
-  padding-top: 80px;
-  z-index: 20;
+.navbar * {
+  color: white !important;
 }
 
 .menu-lateral a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  display: block;
-  text-align: center;
-  margin: 10px 0;
-  transition: 0.2s;
+  color: white !important;
+  text-align: center !important;
+  margin: 10px 0 !important;
 }
 
 .menu-lateral a:hover {
-  background: rgba(255,255,255,0.2);
-  color: white;
+  background: rgba(255,255,255,0.2) !important;
+  color: white !important;
 }
 
-/* Contenu centré et texte blanc */
-.content {
-  color: white;
-  text-align: center;
-  padding: 20px 10%;
-  margin: 20px auto;
+/* HEADER et contenu */
+header.hero div, .content, .valeurs, .map-section, footer {
+  background: transparent !important;
+  color: white !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
 }
 
-/* Paragraphes centrés */
-.default p, .valeur p, .citation, .conclusion {
-  margin: 10px auto;
-  max-width: 800px;
-  line-height: 1.6;
+/* Paragraphes et titres */
+h1, h2, h3, h4, h5, h6, p {
+  color: white !important;
+  text-align: center !important;
+  margin: 10px auto !important;
+  line-height: 1.6 !important;
 }
 
-/* Titres */
-h1, h2, h3 {
-  color: white;
-  font-weight: bold;
-}
-
-/* Images sans fond et centrées */
+/* Images */
 img {
-  display: block;
-  margin: 20px auto;
-  background: transparent;
-  max-width: 100%;
-  height: auto;
+  display: block !important;
+  margin: 20px auto !important;
+  background: transparent !important;
+  max-width: 100% !important;
+  height: auto !important;
 }
 
-/* Cards : fond transparent et texte blanc */
+/* Cards */
 .card, .card_actualite {
-  background: transparent;
-  color: white;
-  text-align: center;
+  background: transparent !important;
+  color: white !important;
+  text-align: center !important;
 }
 
-/* Overlay texte sur les cards (optionnel) */
 .overlay-text {
-  background: rgba(0,0,0,0.5); /* léger overlay pour lisibilité */
-  color: white;
-  text-align: center;
+  background: rgba(0,0,0,0.5) !important; /* optionnel pour lisibilité */
+  color: white !important;
+  text-align: center !important;
 }
 
-/* Footer */
-footer {
-  background: transparent;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
+/* Footer liens */
+footer a {
+  color: #4da6ff !important;
+  text-decoration: none !important;
 }
 
-/* Liens */
-a {
-  color: #4da6ff;
-  text-decoration: none;
+footer a:hover {
+  text-decoration: underline !important;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* Bouton scroll-top */
-.scroll-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  z-index: 1000;
-}
-
+/* Scroll-top */
 .scroll-top img {
-  width: 40px;
+  width: 40px !important;
 }
 
-/* Responsivité */
+/* Responsive */
 @media (max-width: 900px) {
   .valeurs-container, .gallery {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column !important;
+    align-items: center !important;
   }
-
   .default p, .valeur p {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }
