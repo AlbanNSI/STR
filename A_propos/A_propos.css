@@ -1,11 +1,13 @@
+/* === Réinitialisation et fond 3D === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #e4e4e4;
-  color: black;
+  background: transparent; /* voir le fond Spline */
+  color: white;             /* tout le texte en blanc */
+  text-align: center;       /* centrer par défaut tout le contenu */
 }
-/* Background Spline */
 
+/* Fond Spline */
 .spline-background{
   position: fixed;
   top:0;
@@ -20,420 +22,116 @@ body {
   height:100%;
 }
 
-/* rendre le site transparent pour voir le fond */
+/* Enlever les marges par défaut des titres et paragraphes */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 10px 0;
+}
 
-body{
+/* Enlever le fond des conteneurs */
+.navbar, .content, .hero div, .menu-lateral, footer {
   background: transparent;
 }
-h1
-{
-  font-family : "Arial";
-  color : #082640;
-  font-size : 30px;
-}
-.entete h1{
-  color:#082640;
-  font-weight: bold;
-}
-.entete h2{
-  color:#082640;
-  font-style: italic;
-}
-.default p {
-  margin-left: 80px;
-}
 
+/* Navbar centrée et texte blanc */
 .navbar {
-  background: #F5FFFA;
   padding: 15px 20px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  position: relative;
   z-index: 10;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  width:100px;
-  height:100px;
-}
-
-.logoimage{
-  width:100px;
-  height:100px;
-  margin-right: 50px;
-  align-items: center;
-}
-
-
-.burger {
+.navbar .burger {
+  color: white;
   font-size: 28px;
   cursor: pointer;
-  margin-right: 20px;
 }
 
+/* Menu latéral et liens */
 .menu-lateral {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 260px;
-  height: 100%;
-  background: #082640;
-  transform: translateX(-100%);
-  transition: transform 0.35s ease;
+  background: rgba(0,0,0,0.7); /* léger semi-transparent pour lisibilité */
   padding-top: 80px;
   z-index: 20;
-}
-
-.menu-lateral.open {
-  transform: translateX(0);
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  display: none;
-  z-index: 15;
-}
-
-.overlay.show {
-  display: block;
-}
-
-.menu-lateral ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-lateral li {
-  margin: 20px 0;
-}
-.menu-logo{
-  font-size: 24px;
-  font-weight: bold;
-  width:120px;
-  height:80px;
 }
 
 .menu-lateral a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  padding: 10px 20px;
   display: block;
+  text-align: center;
+  margin: 10px 0;
   transition: 0.2s;
 }
 
 .menu-lateral a:hover {
-  background: #FFFACD;
-  border-left: 4px solid #FF0000;
-  color: black;
-}
-
-/* Carousel Styles */
-.caroussel {
-    position: relative;
-    max-width: 900px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.slides-container {
-    overflow: hidden;
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    min-width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-.slide {
-    min-width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-
-.btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #000;           
-    font-size: 3rem;
-    cursor: pointer;
-    padding: 0;
-    line-height: 1;
-    transition: transform 0.2s ease;
-}
-
-
-.btn:hover {
-    transform: translateY(-50%) scale(1.3);
-}
-
-.prev { left: 15px; }
-.next { right: 15px; }
-
-
-.dots {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    text-align: center;
-}
-
-.dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    background: rgba(255,255,255,0.6);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: white;
-}
-
-
-@media (max-width: 600px) {
-}
-
-
-.scroll-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.scroll-top img {
-  width: 40px;     
-  height: auto;
-}
-
-.scroll-top img:hover {       
-  transform: scale(1.1);
-  transition: 0.2s;
-}
-
-
-footer {
-    background-color: #082640;
-    color: #ffffff;
-    margin-top: 60px;
-    padding: 30px 20px;
-    width: 100%;
-}
-
-footer p {
-    color: #e0e0e0;
-    margin: 8px 0;
-}
-
-
-a {
-    color: #4db6ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.copyright {
-    margin-top: 20px;
-    font-size: 0.9em;
-    opacity: 0.8;
-}
-
-@media screen and (max-width: 900px) {
-    table, tr, td {
-        display: block;
-        width: 100%;
-    }
-
-    td {
-        margin-bottom: 20px;
-    }
-
-    body > center > p {
-        width: 90%;
-    }
-}
-
-
-.insta {
-  width: 30px;
-  margin-top: 10px;
-
-}
-
-/* Cards*/
-
-.gallery {
-  display: flex;
-  justify-content: space-around;
-  padding: 100px 20px;
-}
-
-.card {
-  position: relative;
-  width: 250px;
-  height: 350px;
-  background: grey;
-  overflow: hidden;
-}
-.card_actualite {
-  position: relative;
-  width: 500px;
-  height: 350px;
-  background: #e4e4e4;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s;
-}
-
-
-
-.card:hover img {
-  filter: blur(4px);
-}
-
-.card:hover .overlay-text {
-  opacity: 1;
-}
-
-
-.overlay-text{
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-/* Fin des cards*/
-
-.logoimage{
-  width:250px;
-  height:300px;
-}
-
-
-.close-arrow {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  font-size: 50px;
+  background: rgba(255,255,255,0.2);
   color: white;
 }
-----------------------------------------------------------------------------------------
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial, sans-serif;
-}
-
-.logo-container {
+/* Contenu centré et texte blanc */
+.content {
+  color: white;
   text-align: center;
-  margin: 30px 0;
+  padding: 20px 10%;
+  margin: 20px auto;
 }
 
-.logo {
-  width: 180px;
-}
-
-.valeurs {
-  text-align: center;
-  padding: 60px 10%;
-}
-
-.valeurs h1 {
-  margin-bottom: 50px;
-}
-
-.valeurs-container {
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-}
-
-.valeur {
-  flex: 1;
-}
-
-.valeur h2 {
-  margin-bottom: 15px;
-}
-
-.valeur p {
+/* Paragraphes centrés */
+.default p, .valeur p, .citation, .conclusion {
+  margin: 10px auto;
+  max-width: 800px;
   line-height: 1.6;
 }
 
-.note {
-  margin-top: 50px;
-  font-style: italic;
+/* Titres */
+h1, h2, h3 {
+  color: white;
+  font-weight: bold;
 }
 
+/* Images sans fond et centrées */
+img {
+  display: block;
+  margin: 20px auto;
+  background: transparent;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Cards : fond transparent et texte blanc */
+.card, .card_actualite {
+  background: transparent;
+  color: white;
+  text-align: center;
+}
+
+/* Overlay texte sur les cards (optionnel) */
+.overlay-text {
+  background: rgba(0,0,0,0.5); /* léger overlay pour lisibilité */
+  color: white;
+  text-align: center;
+}
+
+/* Footer */
 footer {
-  background-color: #0b2239;
+  background: transparent;
   color: white;
   text-align: center;
   padding: 40px 20px;
-  margin-top: 80px;
 }
 
-footer a {
+/* Liens */
+a {
   color: #4da6ff;
   text-decoration: none;
 }
 
-footer a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-.insta {
-  width: 18px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-.copyright {
-  margin-top: 20px;
-  font-size: 14px;
-}
-
+/* Bouton scroll-top */
 .scroll-top {
   position: fixed;
   bottom: 30px;
@@ -441,50 +139,21 @@ footer a:hover {
   border: none;
   background: none;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .scroll-top img {
   width: 40px;
 }
 
-
+/* Responsivité */
 @media (max-width: 900px) {
-  .valeurs-container {
+  .valeurs-container, .gallery {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .default p, .valeur p {
+    margin-left: 0;
   }
 }
-
-.map-section {
-  padding: 60px 10%;
-  text-align: center;
-}
-
-.map-section h2 {
-  margin-bottom: 60px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
