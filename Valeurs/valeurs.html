@@ -17,15 +17,20 @@ img {
 
 .objet {
   height: 100px;
-  animation: rotation 5s linear infinite;
+  animation: rotation 2s linear infinite;
 }
 
 @keyframes rotation {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+
+  40% {
+    transform: rotate(360deg); /* rotation rapide */
+  }
+
+  100% {
+    transform: rotate(360deg); /* pause */
   }
 }
 
@@ -134,6 +139,7 @@ p{
 
 </body>
 </html>
+
 
 
 
