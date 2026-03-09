@@ -1,105 +1,231 @@
-/* === Fond Spline === */
-body, html {
+/* Global */
+* {
   margin: 0;
   padding: 0;
-  background: transparent !important; /* voir le fond Spline */
-  color: white !important;            /* texte blanc */
-  font-family: Arial, sans-serif;
-  text-align: center !important;      /* centrer tout le contenu */
+  box-sizing: border-box;
 }
 
-/* Fond 3D Spline */
-.spline-background {
-  position: fixed !important;
+body {
+  font-family: Arial, sans-serif;
+  background: transparent;
+  color: white;
+  text-align: center;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, p, a, li {
+  color: white;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  background: transparent;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo, .logoimage {
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Burger menu */
+.burger {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  margin-right: 20px;
+}
+
+/* Menu latéral */
+.menu-lateral {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: -1 !important;
+  width: 260px;
+  height: 100%;
+  background: transparent;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  padding-top: 80px;
+  z-index: 20;
 }
 
-.spline-background spline-viewer {
-  width: 100% !important;
-  height: 100% !important;
+.menu-lateral.open {
+  transform: translateX(0);
 }
 
-/* Enlever les fonds de toutes les sections */
-header.hero div,
-.content,
-.valeurs,
-.map-section,
-footer,
-.card,
-.card_actualite,
-.menu-lateral {
-  background: transparent !important;
-  color: white !important;
-  text-align: center !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
-  border-radius: 0 !important;
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Titres et paragraphes */
-h1, h2, h3, h4, h5, h6, p, li {
-  color: white !important;
-  text-align: center !important;
-  margin: 10px auto !important;
-  line-height: 1.6 !important;
-}
-
-/* Images centrées et sans fond */
-img {
-  display: block !important;
-  margin: 20px auto !important;
-  background: transparent !important;
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-/* Liens */
-a {
-  color: #4da6ff !important;
-  text-decoration: none !important;
-}
-
-a:hover {
-  text-decoration: underline !important;
-}
-
-/* Overlay texte sur les cards (optionnel pour lisibilité) */
-.overlay-text {
-  background: transparent !important;
-  color: white !important;
-  text-align: center !important;
-}
-
-/* Bouton scroll-top */
-.scroll-top img {
-  width: 40px !important;
-}
-
-/* Navbar et menu */
-.navbar, .navbar *, .burger {
-  background: transparent !important;
-  color: white !important;
+.menu-lateral li {
+  margin: 20px 0;
 }
 
 .menu-lateral a {
-  color: white !important;
-  text-align: center !important;
-  margin: 10px 0 !important;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
 }
 
 .menu-lateral a:hover {
-  background: rgba(255,255,255,0.2) !important;
-  color: white !important;
+  background: transparent;
+  border-left: 4px solid white;
+  color: white;
+}
+
+/* Carousel */
+.caroussel {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Carousel buttons */
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;           
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.btn:hover {
+  transform: translateY(-50%) scale(1.3);
+}
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* Cards */
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+.card, .card_actualite {
+  width: 250px;
+  height: 350px;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img, .card_actualite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: transparent;
+}
+
+.card:hover img {
+  filter: none; /* pas de flou */
+}
+
+.overlay-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: transparent;
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  background: transparent;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll top button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.scroll-top img {
+  width: 40px;
+  height: auto;
+}
+
+.scroll-top img:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .valeurs-container, .gallery {
-    flex-direction: column !important;
-    align-items: center !important;
+    flex-direction: column;
+    align-items: center;
   }
 }
