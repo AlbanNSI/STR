@@ -6,8 +6,26 @@
 		<style>
 			body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background-color:#0d2b45; /* fond bleu général */
+    font-family:'Poppins', sans-serif;
+    background:#0d2b45;
+    color:#0d2b45;
+}
+
+/* TITRES */
+
+h1{
+    font-size:60px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:40px;
+}
+
+p{
+    font-size:20px;
+    line-height:1.6;
 }
 
 /* HEADER */
@@ -21,21 +39,50 @@
     width:180px;
 }
 
-/* SECTIONS BLANCHES */
-
 .section-blanche{
+
     background:white;
-    width:80%;
-    margin:60px auto;
-    padding:60px;
-    border-radius:10px;
+
+    padding:120px 10%;
+
+    position:relative;
+
 }
 
-/* TITRES */
+/* diagonale du haut */
 
-h1{
-    text-align:center;
-    font-size:40px;
+.section-blanche::before{
+
+    content:"";
+    position:absolute;
+
+    top:-80px;
+    left:0;
+
+    width:100%;
+    height:80px;
+
+    background:white;
+
+    clip-path: polygon(0 100%,100% 0,100% 100%,0 100%);
+}
+
+/* diagonale du bas */
+
+.section-blanche::after{
+
+    content:"";
+    position:absolute;
+
+    bottom:-80px;
+    left:0;
+
+    width:100%;
+    height:80px;
+
+    background:white;
+
+    clip-path: polygon(0 0,100% 0,100% 100%,0 0);
 }
 
 .slogan{
@@ -44,26 +91,23 @@ h1{
     margin-top:10px;
 }
 
-/* ACTUALITÉS */
 
-.actus-container{
-    display:flex;
-    align-items:center;
-    gap:80px;
+.hero{
+
+    text-align:center;
+    padding:180px 10%;
+    color:white;
+
 }
 
-.actus-image img{
-    width:250px;
+.hero h1{
+    font-size:70px;
 }
 
-.actus-texte{
-    max-width:500px;
+.hero p{
+    font-size:26px;
+    opacity:0.9;
 }
-
-.actus-texte h2{
-    margin-bottom:20px;
-}
-
 /* FOOTER */
 
 .footer{
@@ -71,6 +115,24 @@ h1{
     color:white;
     text-align:center;
     padding:50px;
+}
+
+.actus-container{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:100px;
+
+}
+
+.actus-image img{
+    width:350px;
+}
+
+.actus-texte{
+    max-width:700px;
 }
 		</style>
 		<title>Actualité</title>
@@ -101,40 +163,46 @@ h1{
         <center>
         <header>
         <a href="../index.html"><img src="../Image/logo.png" class="logo"></a>
-        <section class="section-blanche">
-    <h1>Actualité</h1>
-    <p class="slogan">Votre but à portée de main !</p>
+        <section class="hero">
+
+<img src="logo.png" width="200">
+
+<h1>Actualité</h1>
+
+<p>Votre but à portée de main</p>
+
 </section>
 
-<section class="section-blanche actus">
-    
-    <div class="actus-container">
 
-        <div class="actus-image">
-            <img src="parapluie.png" alt="parapluie">
-        </div>
+<section class="section-blanche">
 
-        <div class="actus-texte">
-            <h2>Nouveauté !</h2>
+<div class="actus-container">
 
-            <p>Nous récupérons des parapluies cassés :</p>
+<div class="actus-image">
+<img src="parapluie.png">
+</div>
 
-            <ul>
-                <li>Tailles différentes</li>
-                <li>Avec motif ou non</li>
-                <li>Couleurs unies ou multiples</li>
-            </ul>
+<div class="actus-texte">
 
-            <h3>Pourquoi ?</h3>
+<h2>Nouveauté</h2>
 
-            <p>
-            Notre but est de les recycler car tout objet peut avoir une seconde vie.
-            Des boîtes de dépôt sont disponibles dans le bureau des régences.
-            </p>
+<p>
+Nous récupérons des parapluies cassés de tous types :
+</p>
 
-        </div>
+<ul>
+<li>tailles différentes</li>
+<li>motif ou non</li>
+<li>couleurs unies ou multiples</li>
+</ul>
 
-    </div>
+<p>
+Notre objectif est de leur donner une seconde vie en les recyclant.
+</p>
+
+</div>
+
+</div>
 
 </section>
 	<center>
