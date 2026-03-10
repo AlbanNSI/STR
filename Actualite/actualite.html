@@ -142,24 +142,6 @@ p{
 .actus-texte{
     max-width:700px;
 }
-.hero-3d {
-    position: relative;
-    width: 1250px;
-    height: 400px; /* visible seulement sur le premier écran */
-    overflow: hidden;
-}
-
-.hero-3d iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 100%;
-    border: show;
-    margin: 0;
-    padding: 0;
-}
-
 		</style>
 		<title>Actualité</title>
 		<script src="../script_menu.js"></script>
@@ -171,9 +153,11 @@ p{
     <nav class="navbar">
         <div class="burger" onclick="toggleMenu()">☰</div>
     </nav>
-    <center>
-    <spline-viewer  url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
-    </center>
+    
+    
+<spline-viewer  url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
+
+
     <div id="overlay" class="overlay" onclick="closeMenu()"></div>
 
     <aside id="menu-lateral" class="menu-lateral">
@@ -195,7 +179,7 @@ p{
         <a href="../index.html"><img src="../Image/logo.png" class="logo"></a>
         <section class="hero">
 
-<spline-viewer class="hero-3d" url="https://prod.spline.design/NS9w5oGz86pZaT10/scene.splinecode"></spline-viewer>
+<img src="../Image/logo_actu.png" width="600">
 
 <p>Votre but à portée de main</p>
 
@@ -207,7 +191,7 @@ p{
 <div class="actus-container">
 
 <div class="actus-image">
-<img src="parapluie.png">
+<img src="../Image/parapluie.png">
 </div>
 
 <div class="actus-texte">
