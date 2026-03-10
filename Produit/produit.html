@@ -5,13 +5,42 @@
   <link rel="stylesheet" href="../index.css">
   <title> Produit – Strik3r</title>
   <script src="../script_menu.js"></script>
+
+<style>
+
+/* Logo flottant en bas à droite */
+.logo-floating{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#FFFFFF;
+  padding:10px 23px;  
+  border-radius:10px;  
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  z-index:9999;
+}
+
+.logo-floating img{
+  height:40px;
+  display:block;
+}
+
+</style>
+
 </head>
   
 <body>
 
+<!-- Logo flottant -->
+<div class="logo-floating">
+  <a href="../index.html">
+    <img src="../Image/logo.png" alt="Strik3r Logo">
+  </a>
+</div>
+
 <nav class="navbar">
         <div class="burger" onclick="toggleMenu()">☰</div>
-    </nav>
+</nav>
 
 <aside id="menu-lateral" class="menu-lateral">
   <div class="menu-header">
@@ -26,7 +55,7 @@
 </aside>
 
 <center>
-  <a href="../index.html"><img src="../Image/logo.png" class="logo"></a>
+
   <img src="../Image/image_produit.gif" alt="Animation produit"
      style="
        display:block;
@@ -34,88 +63,89 @@
        width:50%;
        border-radius:15px;
      ">
-  <h1 <font size="10 "class="slogan">Votre but à portée de main </font> </h1>
+
+  <h1><font size="10" class="slogan">Votre but à portée de main</font></h1>
+
 </center>
 
 <body style="margin:0;">
 
   
-    <img src="../Image/boite_general.png" alt="Image principale"
-     style="
-       width:50%;
-       height:100%;
-       object-fit:cover;
-       display:block;
-       margin:auto;
-       border-radius:15px;  
-     ">
+<img src="../Image/boite_general.png" alt="Image principale"
+ style="
+   width:50%;
+   height:100%;
+   object-fit:cover;
+   display:block;
+   margin:auto;
+   border-radius:15px;  
+ ">
 
 <center>
-  <h1 <font size="10 "class="slogan">Le contenu </font> </h1>
+  <h1><font size="10" class="slogan">Le contenu</font></h1>
 </center>
-  <main class="gallery" style="
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    padding:20px;
-  ">
 
-<main class="gallery" style="display:flex; justify-content:center; gap:20px; padding:20px;">
+<main class="gallery" style="
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:20px;
+">
 
-  <div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
-    <img src="../Image/image1.jpg" alt="" 
-         style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
-    <div class="overlay-text">Info 1</div>
-  </div>
+<div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
+<img src="../Image/image1.jpg" alt="" 
+ style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
+<div class="overlay-text">Info 1</div>
+</div>
 
-  <div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
-    <img src="../Image/image2.jpg" alt="" 
-         style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
-    <div class="overlay-text">info 2</div>
-  </div>
+<div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
+<img src="../Image/image2.jpg" alt="" 
+ style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
+<div class="overlay-text">info 2</div>
+</div>
 
-  <div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
-    <img src="../Image/image3.jpg" alt="" 
-         style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
-    <div class="overlay-text">Info 3</div>
-  </div>
+<div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
+<img src="../Image/image3.jpg" alt="" 
+ style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
+<div class="overlay-text">Info 3</div>
+</div>
 
-  <div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
-    <img src="../Image/image3.jpg" alt="" 
-         style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
-    <div class="overlay-text">Info 4</div>
-  </div>
+<div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
+<img src="../Image/image3.jpg" alt="" 
+ style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
+<div class="overlay-text">Info 4</div>
+</div>
 
 </main>
-
-<button class="scroll-top" onclick="scrollToTop()">
-<img src="../Image/fleche.png" alt="Retour en haut">
-</button>
 
 
 
 <footer>
-    <h3>CONTACT</h3>
 
-    <p>Email : <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a></p>
+<h3>CONTACT</h3>
 
-    <p class="social">
-        <a href="https://instagram.com/strik3r2025" target="_blank"><img src="../Image/instagram.png" class="insta">Instagram : strik3r2025</a>
-    </p>
+<p>Email : <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a></p>
 
-    <a href =https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed"><p>Adresse : 56/70 Rue du Perron  
-        <br>69600 Oullins-Pierre-Bénite, France</p>
-    </a>
+<p class="social">
+<a href="https://instagram.com/strik3r2025" target="_blank">
+<img src="../Image/instagram.png" class="insta">
+Instagram : strik3r2025
+</a>
+</p>
 
-    <div class="copyright">
-        © 2025 — Tous droits réservés
-    </div>
+<a href="https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed">
+<p>
+Adresse : 56/70 Rue du Perron  
+<br>69600 Oullins-Pierre-Bénite, France
+</p>
+</a>
+
+<div class="copyright">
+© 2025 — Tous droits réservés
+</div>
+
 </footer>
-</center>
-
-</body>
-
 
 </body>
 </html>
