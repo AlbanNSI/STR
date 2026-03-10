@@ -7,7 +7,9 @@
 		<script src="script_menu.js"></script>
 		<script src="caroussel.js"></script>
   </head>
-	
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
+
+
 <body>
 <!--début menu latéral-->
 <nav class="navbar">
@@ -33,7 +35,26 @@
  <div class="entete">
 	<center>
     <img src="Image/logo.png" class="logo">
-	<h1>Accueil</h1>
+    <spline-viewer class="hero-3d" url="https://prod.spline.design/ACiCraHweaCVGTXE/scene.splinecode"></spline-viewer>
+    <style> 
+        .hero-3d {
+  position: relative;
+  width: 825px;
+  height: 400px; /* visible seulement sur le premier écran */
+  overflow: hidden;
+}
+
+.hero-3d iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+    </style>
     <h2>Votre but à portée de main</h2>
   </center>
  </div>
