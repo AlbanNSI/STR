@@ -5,25 +5,19 @@
   <title>Valeurs – Strik3r</title>
   <link rel="stylesheet" href="../index.css">
   <script src="../script_menu.js" defer></script>
+</head>
 
+
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
+
+
+
+
+<body>
+<spline-viewer  url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
+
+<div class="content">
 <style>
-
-/* Logo flottant en bas à droite */
-.logo-floating{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#ff2a2a;
-  padding:10px 18px;
-  border-radius:20px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.3);
-  z-index:9999;
-}
-
-.logo-floating img{
-  height:40px;
-  display:block;
-}
 
 hr {
   width: 50%;
@@ -42,10 +36,10 @@ spline-viewer {
   z-index: -1;
 }
 
-.hero-3d {
+  .hero-3d {
   position: relative;
   width: 600px;
-  height: 400px;
+  height: 400px; /* visible seulement sur le premier écran */
   overflow: hidden;
 }
 
@@ -60,6 +54,8 @@ spline-viewer {
   padding: 0;
 }
 
+
+  
 img {
   width: 120px;
 }
@@ -73,9 +69,17 @@ img {
 }
 
 @keyframes rotation {
-  0% { transform: rotate(0deg); }
-  40% { transform: rotate(330deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(330deg); /* rotation rapide */
+  }
+
+  100% {
+    transform: rotate(360deg); /* pause */
+  }
 }
 
 p{
@@ -86,9 +90,11 @@ p{
   width: 300px;
   padding: 20px;
   background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px; /* bords arrondis */
+  
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* ombre */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* animation fluide */
 }
 
 .valeur h2{
@@ -98,10 +104,10 @@ p{
 .valeur p{
   color:white;
 }
-
+  
 .valeur:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+  transform: scale(1.05); /* zoom */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7); /* ombre plus forte */
 }
 
 #epa{
@@ -115,29 +121,12 @@ p{
 #esprit{
   background: linear-gradient(135deg, #b8120c, #e61811, #ff5a54);
 }
-
 </style>
-
-<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
-
-</head>
-
-<body>
-
-<!-- Logo flottant -->
-<div class="logo-floating">
-  <a href="../index.html">
-    <img src="../Image/logo.png" alt="Strik3r Logo">
-  </a>
-</div>
-
-<spline-viewer url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
-
-<div class="content">
+  
 
 <nav class="navbar">
-  <div class="burger" onclick="toggleMenu()">☰</div>
-</nav>
+        <div class="burger" onclick="toggleMenu()">☰</div>
+    </nav>
 
 <aside id="menu-lateral" class="menu-lateral">
   <div class="menu-header">
@@ -152,98 +141,227 @@ p{
 </aside>
 
 <div id="overlay" onclick="closeMenu()"></div>
-
 <center>
-
-<div>
-<spline-viewer class="hero-3d" url="https://prod.spline.design/IhOVrtyiHQIx-J5x/scene.splinecode"></spline-viewer>
-<h2>Votre but à portée de main</h2>
+<div class="logo-container">
+  <a href="../index.html"><img src="../Image/logo.png" class="logo"></a>
 </div>
+</center>
+  
+<center>
+<div>
+  <spline-viewer class="hero-3d" url="https://prod.spline.design/IhOVrtyiHQIx-J5x/scene.splinecode"></spline-viewer>
+  <h2>Votre but à portée de main</h2>
+</div>
+</center>
 
 <br><br>
 
-<div class="valeurs-container">
+<center>
+  <div class="valeurs-container">
+    <div class="valeur" id="esprit">
+      <h2>Esprit d'équipe</h2>
+    
+      <img src="../Image/esprit_equipe2.png" class="objet">
+      <p>
+        Nous sommes une entreprise soudée qui est prête à aider chacun des
+        différents services en cas de besoin.
+      </p>
+    </div>
 
-<div class="valeur" id="esprit">
-<h2>Esprit d'équipe</h2>
-<img src="../Image/esprit_equipe2.png" class="objet">
-<p>
-Nous sommes une entreprise soudée qui est prête à aider chacun des
-différents services en cas de besoin.
-</p>
-</div>
+    <div class="valeur" id="exc">
+      <h2>Excellence</h2>
+      <img src="../Image/excellence2.png" class="objet">
+      <p>
+        Nous souhaitons fournir les résultats à la hauteur des espérances de
+        nos clients et partenaires. L'excellence pour nous, c’est viser la
+        perfection tout en restant ouvert à l’apprentissage continu.
+      </p>
+    </div>
 
-<div class="valeur" id="exc">
-<h2>Excellence</h2>
-<img src="../Image/excellence2.png" class="objet">
-<p>
-Nous souhaitons fournir les résultats à la hauteur des espérances de
-nos clients et partenaires. L'excellence pour nous, c’est viser la
-perfection tout en restant ouvert à l’apprentissage continu.
-</p>
-</div>
+    <div class="valeur" id="epa">
+      <h2>Épanouissement</h2>
+      <img src="../Image/epanouissemnt2.png" class="objet">
+      <p>
+        Nous mettons un point d’honneur à créer un environnement où chacun peut
+        s’exprimer, apprendre et évoluer.
+      </p>
+    </div>
+  </div>
 
-<div class="valeur" id="epa">
-<h2>Épanouissement</h2>
-<img src="../Image/epanouissemnt2.png" class="objet">
-<p>
-Nous mettons un point d’honneur à créer un environnement où chacun peut
-s’exprimer, apprendre et évoluer.
-</p>
-</div>
+  <p class="note">
+    Ces 3 valeurs forment trois E, ce qui correspond au chiffre “3” à la place
+    du “e” dans le nom de notre entreprise.
+  </p>
 
-</div>
-
-<p class="note">
-Ces 3 valeurs forment trois E, ce qui correspond au chiffre “3” à la place
-du “e” dans le nom de notre entreprise.
-</p>
 
 <button class="scroll-top" onclick="scrollToTop()">
-<img src="../Image/fleche.png" alt="Retour en haut">
+  <img src="../Image/fleche.png" alt="Retour en haut">
 </button>
 
-<br><br><hr><br><br>
+
+<br></br> <hr></hr> <br></br>
 
 <div>
-<p>Nous sommes également engagés dans la cause féminine comme en témoigne l'événement que nous organisons à l'occasion de la journée de la femme.</p>
-<p>Vous pouvez retrouver notre brochure ici :
-<a href="https://www.strik3r.fr/Actualite/actualite.html">Voir la brochure</a></p>
+  <p>Nous sommes également engagés dans la cause féminine comme en témoigne l'événement que nous organisons à l'occasion de la journée de la femme.</p>
+  <p>Vous pouvez retrouver notre brochure ici : <a href="https://www.strik3r.fr/Actualite/actualite.html">Voir la brochure</a></p>
 </div>
 
 </center>
 
-<footer>
-<center>
+<footer><center>
+  <h3>CONTACT</h3>
 
-<h3>CONTACT</h3>
+  <p>Email :
+    <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
+  </p>
 
-<p>Email :
-<a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
-</p>
+  <p class="social">
+    <a href="https://instagram.com/strik3r2025" target="_blank">
+      <img src="../Image/instagram.png" class="insta" alt="Instagram">
+      Instagram : strik3r2025
+    </a>
+  </p>
 
-<p class="social">
-<a href="https://instagram.com/strik3r2025" target="_blank">
-<img src="../Image/instagram.png" class="insta">
-Instagram : strik3r2025
-</a>
-</p>
+  <a href =https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed"><p>Adresse : 56/70 Rue du Perron  
+    <br>69600 Oullins-Pierre-Bénite, France</p>
+  </a>
 
-<a href="https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed">
-<p>
-Adresse : 56/70 Rue du Perron  
-<br>69600 Oullins-Pierre-Bénite, France
-</p>
-</a>
-
-<div class="copyright">
-© 2025 — Tous droits réservés
-</div>
-
-</center>
-</footer>
-
-</div>
+  <div class="copyright">
+    © 2025 — Tous droits réservés
+  </div>
+</center></footer>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <h3>CONTACT</h3>
+
+    <p>Email : <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a></p>
+
+    <p class="social">
+        <a href="https://instagram.com/strik3r2025" target="_blank"><img src="../Image/instagram.png" class="insta">Instagram : strik3r2025</a>
+    </p>
+
+    <a href =https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed"><p>Adresse : 56/70 Rue du Perron  
+        <br>69600 Oullins-Pierre-Bénite, France</p>
+    </a>
+
+    <div class="copyright">
+        © 2025 — Tous droits réservés
+    </div>
+</footer>
+</center>
+
+</body>
+
+
+</body>
+</html>
+
