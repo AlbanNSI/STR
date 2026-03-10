@@ -10,6 +10,7 @@
 <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
 
 <body>
+    <spline-viewer  url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
 <!--début menu latéral-->
 <nav class="navbar">
   <div class="burger" onclick="toggleMenu()">☰</div>
@@ -33,10 +34,19 @@
 <!--fin menu latéral-->
  <div class="entete">
 	<center>
-    <img src="Image/logo.png" class="logo">
-    <spline-viewer class="hero-3d" url="https://prod.spline.design/ACiCraHweaCVGTXE/scene.splinecode"></spline-viewer>
-    <style> 
-        .hero-3d {
+        <img src="Image/logo.png" class="logo">
+        <spline-viewer class="hero-3d" url="https://prod.spline.design/ACiCraHweaCVGTXE/scene.splinecode"></spline-viewer>
+        <style> 
+spline-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-3d {
   position: relative;
   width: 825px;
   height: 400px; /* visible seulement sur le premier écran */
@@ -53,9 +63,10 @@
   margin: 0;
   padding: 0;
 }
-    </style>
-    <h2>Votre but à portée de main</h2>
-  </center>
+
+        </style>
+        <h2>Votre but à portée de main</h2>
+    </center>
  </div>
 
 	<div class="caroussel" aria-label="Carrousel d’images">
@@ -107,7 +118,6 @@
 </footer>
 </center>
 
-</body>
 </html>
 
 
