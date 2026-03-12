@@ -1,210 +1,260 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Valeurs – Strik3r</title>
-  <link rel="stylesheet" href="../index.css">
-  <script src="../script_menu.js" defer></script>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valeurs – Strik3r</title>
+<link rel="stylesheet" href="../index.css">
+<script src="../script_menu.js" defer></script>
 </head>
-
 
 <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
 
-
-
-
 <body>
-<spline-viewer  url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
+
+<spline-viewer url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
 
 <div class="content">
+
 <style>
 
-.insta {
-  width: 50px;
-  margin-top: 10px;
-
+.insta{
+width:50px;
+margin-top:5px;
 }
 
-hr {
-  width: 50%;
-  height: 3px;
-  margin: 40px auto;
-  border: none;
-  background: linear-gradient(to right, transparent, #333, transparent);
+hr{
+width:50%;
+height:3px;
+margin:40px auto;
+border:none;
+background:linear-gradient(to right, transparent, #333, transparent);
 }
 
-spline-viewer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+spline-viewer{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
 }
 
-  .hero-3d {
-  position: relative;
-  width: 600px;
-  height: 400px; /* visible seulement sur le premier écran */
-  overflow: hidden;
+/* rectangle flottant comme page actualité */
+.logo-floating{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#FFFFFF;
+padding:10px 23px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
+z-index:9999;
 }
 
-.hero-3d iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 25%;
-  height: 100%;
-  border: none;
-  margin: 0;
-  padding: 0;
+.logo-floating img{
+width:120px;
 }
 
-
-  
-img {
-  width: 120px;
+.hero-3d{
+position:relative;
+width:600px;
+height:400px;
+overflow:hidden;
 }
 
-.objet {
-  height: 100px;
+.hero-3d iframe{
+position:absolute;
+top:0;
+left:0;
+width:25%;
+height:100%;
+border:none;
+margin:0;
+padding:0;
 }
 
-.objet:hover {
-  animation: rotation 1s linear infinite;
+img{
+width:120px;
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
+.objet{
+height:100px;
+}
 
-  40% {
-    transform: rotate(330deg); /* rotation rapide */
-  }
+.objet:hover{
+animation:rotation 1s linear infinite;
+}
 
-  100% {
-    transform: rotate(360deg); /* pause */
-  }
+@keyframes rotation{
+
+0%{
+transform:rotate(0deg);
+}
+
+40%{
+transform:rotate(330deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
 }
 
 p{
-  font-size: 20px;
+font-size:20px;
 }
 
-.valeur {
-  width: 300px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 15px; /* bords arrondis */
-  
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* ombre */
+.valeur{
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* animation fluide */
+width:300px;
+padding:20px;
+background-color:white;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.4);
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .valeur h2{
-  color:white;
+color:white;
 }
 
 .valeur p{
-  color:white;
+color:white;
 }
-  
-.valeur:hover {
-  transform: scale(1.05); /* zoom */
-  box-shadow: 0 8px 25px rgba(0,0,0,0.7); /* ombre plus forte */
+
+.valeur:hover{
+transform:scale(1.05);
+box-shadow:0 8px 25px rgba(0,0,0,0.7);
 }
 
 #epa{
-  background: linear-gradient(135deg, #041421, #082640, #0f3d63);
+background:linear-gradient(135deg,#041421,#082640,#0f3d63);
 }
 
 #exc{
-  background: linear-gradient(135deg, #d8952e, #f2ac3e, #ffd07a);
+background:linear-gradient(135deg,#d8952e,#f2ac3e,#ffd07a);
 }
-  
+
 #esprit{
-  background: linear-gradient(135deg, #b8120c, #e61811, #ff5a54);
+background:linear-gradient(135deg,#b8120c,#e61811,#ff5a54);
 }
+
 </style>
-  
 
 <nav class="navbar">
-        <div class="burger" onclick="toggleMenu()">☰</div>
-    </nav>
+<div class="burger" onclick="toggleMenu()">☰</div>
+</nav>
 
 <aside id="menu-lateral" class="menu-lateral">
-  <div class="menu-header">
-    <span class="close-arrow" onclick="closeMenu()">✕</span>
-  </div>
-  <ul>
-    <li><a href="../index.html">Accueil</a></li>
-    <li><a href="../Actualite/actualite.html">Actualité</a></li>
-    <li><a href="../Produit/produit.html">Produits</a></li>
-    <li><a href="../A_propos/A_propos.html">À propos de nous</a></li>
-  </ul>
+<div class="menu-header">
+<span class="close-arrow" onclick="closeMenu()">✕</span>
+</div>
+
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../Actualite/actualite.html">Actualité</a></li>
+<li><a href="../Produit/produit.html">Produits</a></li>
+<li><a href="../A_propos/A_propos.html">À propos de nous</a></li>
+</ul>
+
 </aside>
 
 <div id="overlay" onclick="closeMenu()"></div>
+
 <center>
+
 <div class="logo-container">
-  <a href="../index.html"><img src="../Image/logo.png" class="logo"></a>
+<a href="../index.html">
+<img src="../Image/logo.png" class="logo">
+</a>
 </div>
+
 </center>
-  
+
 <center>
+
 <div>
-  <spline-viewer class="hero-3d" url="https://prod.spline.design/IhOVrtyiHQIx-J5x/scene.splinecode"></spline-viewer>
-  <h2>Votre but à portée de main</h2>
+
+<spline-viewer class="hero-3d" url="https://prod.spline.design/IhOVrtyiHQIx-J5x/scene.splinecode"></spline-viewer>
+
+<h2>Votre but à portée de main</h2>
+
 </div>
+
 </center>
 
 <br><br>
 
 <center>
-  <div class="valeurs-container">
-    <div class="valeur" id="esprit">
-      <h2>Esprit d'équipe</h2>
-    
-      <img src="../Image/esprit_equipe2.png" class="objet">
-      <p>
-        Nous sommes une entreprise soudée qui est prête à aider chacun des
-        différents services en cas de besoin.
-      </p>
-    </div>
 
-    <div class="valeur" id="exc">
-      <h2>Excellence</h2>
-      <img src="../Image/excellence2.png" class="objet">
-      <p>
-        Nous souhaitons fournir les résultats à la hauteur des espérances de
-        nos clients et partenaires. L'excellence pour nous, c’est viser la
-        perfection tout en restant ouvert à l’apprentissage continu.
-      </p>
-    </div>
+<div class="valeurs-container">
 
-    <div class="valeur" id="epa">
-      <h2>Épanouissement</h2>
-      <img src="../Image/epanouissemnt2.png" class="objet">
-      <p>
-        Nous mettons un point d’honneur à créer un environnement où chacun peut
-        s’exprimer, apprendre et évoluer.
-      </p>
-    </div>
-  </div>
+<div class="valeur" id="esprit">
 
-  <p class="note">
-    Ces 3 valeurs forment trois E, ce qui correspond au chiffre “3” à la place
-    du “e” dans le nom de notre entreprise.
-  </p>
+<h2>Esprit d'équipe</h2>
 
+<img src="../Image/esprit_equipe2.png" class="objet">
 
-<br></br> <hr></hr> <br></br>
+<p>
+Nous sommes une entreprise soudée qui est prête à aider chacun des
+différents services en cas de besoin.
+</p>
+
+</div>
+
+<div class="valeur" id="exc">
+
+<h2>Excellence</h2>
+
+<img src="../Image/excellence2.png" class="objet">
+
+<p>
+Nous souhaitons fournir les résultats à la hauteur des espérances de
+nos clients et partenaires. L'excellence pour nous, c’est viser la
+perfection tout en restant ouvert à l’apprentissage continu.
+</p>
+
+</div>
+
+<div class="valeur" id="epa">
+
+<h2>Épanouissement</h2>
+
+<img src="../Image/epanouissemnt2.png" class="objet">
+
+<p>
+Nous mettons un point d’honneur à créer un environnement où chacun peut
+s’exprimer, apprendre et évoluer.
+</p>
+
+</div>
+
+</div>
+
+<p class="note">
+Ces 3 valeurs forment trois E, ce qui correspond au chiffre “3” à la place
+du “e” dans le nom de notre entreprise.
+</p>
+
+<br><br>
+
+<hr>
+
+<br><br>
 
 <div>
-  <p>Nous sommes également engagés dans la cause féminine comme en témoigne l'événement que nous organisons à l'occasion de la journée de la femme.</p>
-  <p>Vous pouvez retrouver notre brochure ici : <a href="https://www.strik3r.fr/Actualite/actualite.html">Voir la brochure</a></p>
+
+<p>
+Nous sommes également engagés dans la cause féminine comme en témoigne l'événement que nous organisons à l'occasion de la journée de la femme.
+</p>
+
+<p>
+Vous pouvez retrouver notre brochure ici :
+<a href="https://www.strik3r.fr/Actualite/actualite.html">Voir la brochure</a>
+</p>
+
 </div>
 
 </center>
@@ -225,40 +275,62 @@ cursor:pointer;
 <img src="../Image/fleche.png" alt="Retour en haut" style="width:30px;">
 
 </button>
-<footer><center>
-  <h3>CONTACT</h3>
+<footer>
 
-  <p>Email :
-    <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
-  </p>
+<center>
 
-  <p class="social">
-    <a href="https://instagram.com/strik3r2025" target="_blank">
-      <img src="../Image/instagram.png" class="insta" alt="Instagram">
-      Instagram : strik3r2025
-    </a>
-  </p>
+<h3>CONTACT</h3>
 
-  <a href =https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed"><p>Adresse : 56/70 Rue du Perron  
-    <br>69600 Oullins-Pierre-Bénite, France</p>
-  </a>
+<p>Email :
+<a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
+</p>
 
-  <div class="copyright">
-    © 2025 — Tous droits réservés
-  </div>
-</center></footer>
+<p class="social">
+
+<a href="https://instagram.com/strik3r2025" target="_blank">
+
+<img src="../Image/instagram.png" class="insta">
+
+Instagram : strik3r2025
+
+</a>
+
+</p>
+
+<a href="https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed">
+
+<p>
+Adresse : 56/70 Rue du Perron
+<br>
+69600 Oullins-Pierre-Bénite, France
+</p>
+
+</a>
+
+<div class="copyright">
+© 2025 — Tous droits réservés
+</div>
+
+</center>
+
+</footer>
+
+<!-- rectangle flottant comme la page actualité -->
+
+<div class="logo-floating">
+
+<a href="../index.html">
+
+<img src="../Image/logo.png" alt="Strik3r">
+
+</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
-
-
-
-</body>
-</html>
-
-
-
-
 
 
 

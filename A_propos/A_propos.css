@@ -9,11 +9,11 @@ body {
 }
 h1{
   font-family : "Arial";
-  color : #e4e4e4;
+  color : #ffffff;
   font-size : 45px;
 }
 .entete h1{
-  color:#e4e4e4;
+  color:#ffffff;
   font-weight: bold;
 }
 .entete h2{
@@ -443,6 +443,7 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
+
 
 
 
