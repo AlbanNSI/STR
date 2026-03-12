@@ -120,8 +120,22 @@ padding:20px;
 </main>
 
 
-<button class="scroll-top" onclick="scrollToTop()">
-  <img src="../Image/fleche.png" alt="Retour en haut">
+<button onclick="scrollToTop()" 
+style="
+position:fixed;
+bottom:20px;
+left:20px;
+z-index:9999;
+background:white;
+border:none;
+padding:10px;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+cursor:pointer;
+">
+
+<img src="../Image/fleche.png" alt="Retour en haut" style="width:30px;">
+
 </button>
   
 <footer>
