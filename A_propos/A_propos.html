@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 
 <meta charset="UTF-8">
@@ -19,7 +20,6 @@ margin:0;
 font-family:Arial;
 }
 
-/* LIENS */
 a{
 color:white;
 text-decoration:none;
@@ -38,7 +38,6 @@ font-size:48px;
 margin-top:20px;
 }
 
-/* SLOGAN */
 .slogan{
 text-align:center;
 font-size:20px;
@@ -78,7 +77,7 @@ position:relative;
 z-index:1;
 }
 
-/* LOGO FLOTTANT BAS DROITE */
+/* LOGO FLOTTANT */
 .logo-floating{
 position:fixed;
 bottom:20px;
@@ -127,17 +126,19 @@ cursor:pointer;
 </a>
 </div>
 
-<!-- MENU -->
+<!-- MENU NAVBAR -->
 <nav class="navbar">
 <div class="burger" onclick="toggleMenu()">☰</div>
 </nav>
 
-<div id="overlay" onclick="closeMenu()"></div>
+<!-- OVERLAY -->
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
 
-<aside id="menu-lateral">
+<!-- MENU LATERAL -->
+<aside id="menu-lateral" class="menu-lateral">
 
-<div>
-<span onclick="closeMenu()">✕</span>
+<div class="menu-header">
+<span class="close-arrow" onclick="closeMenu()">✕</span>
 </div>
 
 <ul>
@@ -175,15 +176,14 @@ STRIK3R : Votre but à portée de main
 
 <p>
 Bienvenue dans l'univers de <strong>Strik3r</strong> !
-Plus qu'une simple entreprise, nous sommes une équipe née de
-l'imagination des élèves de <strong>1ère STMG (promo 2025-2026)</strong>
-du <strong>Lycée Saint-Thomas d'Aquin à Oullins</strong>.
+Nous sommes une équipe d’élèves de <strong>1ère STMG</strong>
+du <strong>Lycée Saint-Thomas d'Aquin</strong>.
 </p>
 
 <p>
-Dans le cadre du concours <strong>Entreprendre pour Apprendre</strong>,
-nous avons créé des <strong>kits voyage uniques</strong> à partir de
-<strong>matériaux recyclés</strong>.
+Dans le cadre du projet <strong>Entreprendre pour Apprendre</strong>,
+nous avons créé des <strong>kits voyage uniques</strong>
+fabriqués avec des <strong>matériaux recyclés</strong>.
 </p>
 
 <h3>Nos piliers</h3>
@@ -197,24 +197,16 @@ nous avons créé des <strong>kits voyage uniques</strong> à partir de
 <h3>Nos objectifs</h3>
 
 <p>
-Notre mission est de vous proposer un
-<strong>produit original et de haute qualité</strong>.
-</p>
-
-<p>
-<strong>Votre satisfaction, c'est notre plus beau voyage.</strong>
+Proposer un <strong>produit original et de haute qualité</strong>
+pour préparer vos futurs voyages.
 </p>
 
 </section>
 
 <!-- ORGANIGRAMME -->
-<header>
-
 <center>
 <img src="Orga.png" width="700">
 </center>
-
-</header>
 
 <!-- MAP -->
 <section>
@@ -232,9 +224,7 @@ style="border:0;">
 
 <!-- BOUTON HAUT -->
 <button onclick="scrollToTop()" class="scroll-top">
-
 <img src="../Image/fleche.png" width="30">
-
 </button>
 
 <!-- FOOTER -->
