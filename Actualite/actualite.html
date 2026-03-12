@@ -1,102 +1,109 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="../index.css">
-		<style>
-			body{
-    margin:0;
-    font-family:'Poppins', sans-serif;
-    background:#0d2b45;
-    color:#0d2b45;
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../index.css">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+background:#0d2b45;
+color:#0d2b45;
 }
 
-spline-viewer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+spline-viewer{
+position: fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
 }
-
 
 h1{
-    font-size:60px;
-    font-weight:700;
-    margin-bottom:20px;
+font-size:60px;
+font-weight:700;
+margin-bottom:20px;
 }
 
 h2{
-    font-size:40px;
+font-size:40px;
 }
 
 p{
-    font-size:20px;
-    line-height:1.6;
+font-size:20px;
+line-height:1.6;
 }
 
 /* HEADER */
 
 .header{
-    text-align:center;
-    padding:40px;
+text-align:center;
+padding:40px;
 }
 
 .logo{
-    width:180px;
+width:180px;
 }
+
+/* LOGO FLOTTANT IDENTIQUE A PRODUIT */
+
+.logo-floating{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#FFFFFF;
+padding:10px 28px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
+z-index:9999;
+}
+
+.logo-floating img{
+height:40px;
+display:block;
+}
+
+/* SECTION BLANCHE */
 
 .section-blanche{
-
-    background:white;
-
-    padding:120px 10%;
-
-    position:relative;
-
+background:white;
+padding:120px 10%;
+position:relative;
 }
 
-/* diagonale du haut */
+/* diagonale haut */
 
 .section-blanche::before{
-
-    content:"";
-    position:absolute;
-
-    top:-80px;
-    left:0;
-
-    width:100%;
-    height:80px;
-
-    background:white;
-
-    clip-path: polygon(0 100%,100% 0,100% 100%,0 100%);
+content:"";
+position:absolute;
+top:-80px;
+left:0;
+width:100%;
+height:80px;
+background:white;
+clip-path: polygon(0 100%,100% 0,100% 100%,0 100%);
 }
 
-/* diagonale du bas */
+/* diagonale bas */
 
 .section-blanche::after{
-
-    content:"";
-    position:absolute;
-
-    bottom:-80px;
-    left:0;
-
-    width:100%;
-    height:80px;
-
-    background:white;
-
-    clip-path: polygon(0 0,100% 0,100% 100%,0 0);
+content:"";
+position:absolute;
+bottom:-80px;
+left:0;
+width:100%;
+height:80px;
+background:white;
+clip-path: polygon(0 0,100% 0,100% 100%,0 0);
 }
 
 .slogan{
-    text-align:center;
-    font-size:20px;
-    margin-top:10px;
+text-align:center;
+font-size:20px;
+margin-top:10px;
 }
 
 .btn-calendar{
@@ -118,91 +125,97 @@ p{
 }
 
 
+
 .hero{
-
-    text-align:center;
-    padding:180px 10%;
-    color:white;
-
+text-align:center;
+padding:180px 10%;
+color:white;
 }
 
 .hero h1{
-    font-size:70px;
+font-size:70px;
 }
 
 .hero p{
-    font-size:26px;
-    opacity:0.9;
+font-size:26px;
+opacity:0.9;
 }
+
 /* FOOTER */
 
 .footer{
-    background:#0b2438;
-    color:white;
-    text-align:center;
-    padding:50px;
+background:#0b2438;
+color:white;
+text-align:center;
+padding:50px;
 }
 
 .actus-container{
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    gap:100px;
-
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:100px;
 }
 
 .actus-image img{
-    width:350px;
+width:350px;
 }
 
 .actus-texte{
-    max-width:700px;
+max-width:700px;
 }
-		</style>
-		<title>Actualité</title>
-		<script src="../script_menu.js"></script>
-    </head>
+
+</style>
+
+<title>Actualité</title>
+<script src="../script_menu.js"></script>
+
+</head>
 
 <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
-	
+
 <body class="body">
-    <nav class="navbar">
-        <div class="burger" onclick="toggleMenu()">☰</div>
-    </nav>
-    
-    
-<spline-viewer  url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
+
+<!-- LOGO FLOTTANT -->
+<div class="logo-floating">
+<a href="../index.html">
+<img src="../Image/logo.png" alt="Strik3r Logo">
+</a>
+</div>
+
+<nav class="navbar">
+<div class="burger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<spline-viewer url="https://prod.spline.design/OjfTv6pA1Z3jK-K8/scene.splinecode"></spline-viewer>
+
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+<aside id="menu-lateral" class="menu-lateral">
+<div class="menu-header">
+<span class="close-arrow" onclick="closeMenu()">✕</span>
+</div>
+
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../Valeurs/valeurs.html">Valeurs</a></li>
+<li><a href="../Produit/produit.html">Produits</a></li>
+<li><a href="../A_propos/A_propos.html">À propos de nous</a></li>
+</ul>
+</aside>
+
+<center>
+
+<header>
 
 
-    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
-
-    <aside id="menu-lateral" class="menu-lateral">
-        <div class="menu-header">
-      <span class="close-arrow" onclick="closeMenu()">✕</span>
-    </div>
-    <ul>
-        <li><a href="../index.html">Accueil</a></li>
-        <li><a href="../Valeurs/valeurs.html">Valeurs</a></li>
-        <li><a href="../Produit/produit.html">Produits</a></li>
-        <li><a href="../A_propos/A_propos.html">À propos de nous</a></li>
-    </ul>
-    </aside>
-
-        <div id="overlay"  onclick="closeMenu()"></div>
-
-        <center>
-        <header>
-        <a href="../index.html"><img src="../Image/logo.png" class="logo"></a>
-        <section class="hero">
+<section class="hero">
 
 <img src="../Image/logo_actu.png" width="600">
 
-<p>Votre but à portée de main</p>
+<p style="color:black;">Votre but à portée de main</p>
 
 </section>
-
 
 <section class="section-blanche">
 
@@ -239,41 +252,70 @@ Notre objectif est de leur donner une seconde vie en les recyclant.
 </div>
 
 </section>
-	<center>
-	<h2>Notre brochure</h2>
-	<img 
-    src="../Image/{14E9B28E-0D13-4DB0-A82A-371B95896F5B}.png" style="object-fit:cover;
-       display:block;
-       margin:auto;
-       border-radius:15px;  ">
-    </img>
-	</center>
-	
-    <center>
-    <footer>
-        <h3>CONTACT</h3>
 
-        <p>Email : <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a></p>
+<h2>Notre brochure</h2>
 
-        
-        <a href="https://www.instagram.com/strik3r2025/" target="_blank">
-        <img src="../Image/instagram.png" alt="Instagram" class="insta">Instagram
-        </a>
-        
-        <button class="scroll-top" onclick="scrollToTop()">
-        <img src="../Image/fleche.png" alt="Retour en haut">
-        </button>
-        
-        <a href =https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed"><p>Adresse : 56/70 Rue du Perron  
-            <br>69600 Oullins-Pierre-Bénite, France</p>
-        </a>
-        
+<img src="../Image/{14E9B28E-0D13-4DB0-A82A-371B95896F5B}.png"
+style="
+object-fit:cover;
+display:block;
+margin:auto;
+border-radius:15px;
+width:600px;
+">
+<button onclick="scrollToTop()" 
+style="
+position:fixed;
+bottom:20px;
+left:20px;
+z-index:9999;
+background:white;
+border:none;
+padding:10px;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+cursor:pointer;
+">
 
-        <div class="copyright">
-            © 2025 — Tous droits réservés
-        </div>
-    </footer>
-    </center>
+<img src="../Image/fleche.png" alt="Retour en haut" style="width:30px;">
+
+</button>
+  
+<footer>
+
+<h3>CONTACT</h3>
+
+<p>Email : 
+<a href="mailto:strik3r@saint-thom.fr">
+strik3r@saint-thom.fr
+</a>
+</p>
+
+<a href="https://www.instagram.com/strik3r2025/" target="_blank">
+<img src="../Image/instagram.png" alt="Instagram" class="insta">
+Instagram
+</a>
+
+<button class="scroll-top" onclick="scrollToTop()">
+<img src="../Image/fleche.png" alt="Retour en haut">
+</button>
+
+<a href="https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed">
+
+<p>
+Adresse : 56/70 Rue du Perron  
+<br>69600 Oullins-Pierre-Bénite, France
+</p>
+
+</a>
+
+<div class="copyright">
+© 2025 — Tous droits réservés
+</div>
+
+</footer>
+
+</center>
 
 </body>
 </html>
