@@ -1,160 +1,235 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Produits – Strik3r</title>
 
-<link rel="stylesheet" href="../index.css">
-<script src="../script_menu.js"></script>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>À propos – Strik3r</title>
+
+<link rel="stylesheet" href="A_propos.css">
+<script src="../script_menu.js" defer></script>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.67/build/spline-viewer.js"></script>
 
 <style>
 
-/* Logo flottant (IDENTIQUE à A propos) */
+/* TEXTE NOIR GLOBAL */
+body{
+color:black;
+margin:0;
+}
+
+a{
+color:black;
+}
+
+/* FORCE TOUT LE TEXTE EN NOIR */
+*{
+color:black !important;
+}
+
+/* INSTAGRAM */
+.insta{
+width:50px;
+margin-top:5px;
+}
+
+/* TITRE */
+.hero h1{
+color:black;
+text-align:center;
+font-size:48px;
+margin-top:20px;
+}
+
+/* SLOGAN */
+.slogan{
+text-align:center;
+font-size:20px;
+}
+
+/* CONTENU */
+.content{
+max-width:900px;
+margin:auto;
+text-align:left;
+padding:40px 80px;
+}
+
+.content p{
+line-height:1.6;
+margin-bottom:20px;
+}
+
+/* FOND SPLINE */
+.spline-background{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+}
+
+.spline-background spline-viewer{
+width:100%;
+height:100%;
+}
+
+/* CONTENU AU DESSUS */
+body *{
+position:relative;
+z-index:1;
+}
+
+/* LOGO FLOTTANT BAS DROITE */
 .logo-floating{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#FFFFFF;
-  padding:10px 28px;
-  border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.3);
-  z-index:9999;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#FFFFFF;
+padding:10px 28px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
+z-index:9999;
 }
 
 .logo-floating img{
-  height:40px;
-  display:block;
-}
-
-/* Bouton retour en haut */
-.scroll-btn{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  z-index:9999;
-  background:white;
-  border:none;
-  padding:10px;
-  border-radius:50%;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  cursor:pointer;
-}
-
-/* Galerie */
-.gallery{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-  padding:20px;
-}
-
-.card{
-  position:relative;
-  border-radius:15px;
-  overflow:hidden;
-}
-
-.card img{
-  width:250px;
-  height:350px;
-  object-fit:cover;
-  border-radius:15px;
-}
-
-/* effet hover */
-.card:hover{
-  transform:scale(1.05);
-  transition:0.3s;
+height:40px;
+display:block;
 }
 
 </style>
 
 </head>
 
-<body style="margin:0;">
+<body>
 
-<!-- LOGO FLOTTANT -->
-<div class="logo-floating">
-  <a href="../index.html">
-    <img src="../Image/logo.png" alt="Strik3r">
-  </a>
-</div>
-
-<!-- MENU -->
+<!-- MENU BURGER -->
 <nav class="navbar">
-  <div class="burger" onclick="toggleMenu()">☰</div>
+<div class="burger" onclick="toggleMenu()">☰</div>
 </nav>
 
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
 <aside id="menu-lateral" class="menu-lateral">
-  <div class="menu-header">
-    <span class="close-arrow" onclick="closeMenu()">✕</span>
-  </div>
-  <ul>
-    <li><a href="../index.html">Accueil</a></li>
-    <li><a href="../Actualite/actualite.html">Actualité</a></li>
-    <li><a href="../Valeurs/valeurs.html">Valeurs</a></li>
-    <li><a href="../A_propos/A_propos.html">À propos de nous</a></li>
-  </ul>
+
+<div class="menu-header">
+<span class="close-arrow" onclick="closeMenu()">✕</span>
+</div>
+
+<ul>
+<li><a href="../Actualite/actualite.html">Actualité</a></li>
+<li><a href="../Valeurs/valeurs.html">Valeurs</a></li>
+<li><a href="../Produit/produit.html">Produits</a></li>
+<li><a href="../index.html">Accueil</a></li>
+</ul>
+
 </aside>
 
-<!-- HEADER -->
-<center>
+<img src="../Image/-PROPOS-DE-NOUS-16-03-2026.gif" alt="Animation produit"
+style="
+display:block;
+margin:auto;
+width:50%;
+border-radius:15px;
+">
 
-<img src="../Image/image_produit.gif"
-     style="width:60%; border-radius:15px; display:block; margin:auto;">
+<p class="slogan">
+Votre but à portée de main
+</p>
 
-<h1>Votre but à portée de main</h1>
+<!-- CONTENU -->
+<section class="content">
 
-</center>
+<h2>L’aventure STRIK3R : Qui sommes-nous ?</h2>
 
-<!-- IMAGE PRINCIPALE -->
-<img src="../Image/boite_general.png"
-     style="width:50%; display:block; margin:auto; border-radius:15px;">
+<p>
+Bienvenue dans l'univers de <strong>Strik3r</strong> !
+Nous sommes une équipe d’élèves de <strong>1ère STMG</strong>
+du <strong>Lycée Saint-Thomas d'Aquin à Oullins</strong>.
+</p>
 
-<center>
-<h1>Le contenu</h1>
-</center>
+<p>
+Dans le cadre du concours <strong>Entreprendre pour Apprendre</strong>,
+nous avons créé des <strong>kits voyage uniques</strong>
+fabriqués à partir de <strong>matériaux recyclés</strong>.
+</p>
 
-<!-- GALERIE -->
-<main class="gallery">
+<h3>Nos piliers</h3>
 
-<div class="card">
-<img src="../Image/image1.jpg">
+<ul>
+<li><strong>L’Excellence</strong></li>
+<li><strong>L’Esprit d’Équipe</strong></li>
+<li><strong>L’Épanouissement</strong></li>
+</ul>
+
+<p>
+<strong>Votre satisfaction, c'est notre plus beau voyage.</strong>
+</p>
+
+</section>
+
+<!-- ORGANIGRAMME -->
+<header class="hero">
+
+<div style="text-align:center;">
+<img src="Orga.png" alt="Organigramme" width="700">
 </div>
 
-<div class="card">
-<img src="../Image/image2.jpg">
-</div>
+</header>
 
-<div class="card">
-<img src="../Image/image3.jpg">
-</div>
+<!-- MAP -->
+<section>
 
-<div class="card">
-<img src="../Image/image3.jpg">
-</div>
+<h2 style="text-align:center;">Nous trouver – Lycée Saint-Thomas d'Aquin</h2>
 
-</main>
+<iframe
+src="https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed"
+width="100%"
+height="400"
+style="border:0;"
+loading="lazy">
+</iframe>
+
+</section>
 
 <!-- BOUTON HAUT -->
-<button class="scroll-btn" onclick="scrollToTop()">
-  <img src="../Image/fleche.png" style="width:30px;">
+<button onclick="scrollToTop()" 
+style="
+position:fixed;
+bottom:20px;
+left:20px;
+z-index:9999;
+background:white;
+border:none;
+padding:10px;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+cursor:pointer;
+">
+
+<img src="../Image/fleche.png" alt="Retour en haut" style="width:30px;">
+
 </button>
 
 <!-- FOOTER -->
-<footer style="text-align:center; padding:40px;">
+<footer>
+
+<center>
 
 <h3>CONTACT</h3>
 
 <p>Email :
-<a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
+<a href="mailto:strik3r@saint-thom.fr">
+strik3r@saint-thom.fr
+</a>
 </p>
 
-<p>
+<p class="social">
 <a href="https://instagram.com/strik3r2025" target="_blank">
-<img src="../Image/instagram.png" style="width:40px;">
+<img src="../Image/instagram.png" class="insta">
 Instagram : strik3r2025
 </a>
 </p>
@@ -162,11 +237,15 @@ Instagram : strik3r2025
 <a href="https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins">
 <p>
 Adresse : 56/70 Rue du Perron<br>
-69600 Oullins-Pierre-Bénite
+69600 Oullins-Pierre-Bénite, France
 </p>
 </a>
 
-<p>© 2025 — Tous droits réservés</p>
+<div class="copyright">
+© 2025 — Tous droits réservés
+</div>
+
+</center>
 
 </footer>
 
