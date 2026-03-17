@@ -145,7 +145,35 @@ background:linear-gradient(135deg,#d8952e,#f2ac3e,#ffd07a);
 #esprit{
 background:linear-gradient(135deg,#b8120c,#e61811,#ff5a54);
 }
+/* Logo flottant en bas à droite */
+.logo-floating{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#FFFFFF;
+  padding:10px 28px;  
+  border-radius:10px;  
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  z-index:9999;
+}
 
+.logo-floating img{
+  height:40px;
+  display:block;
+}
+
+
+
+</head>
+  
+<body>
+
+<!-- Logo flottant -->
+<div class="logo-floating">
+  <a href="../index.html">
+    <img src="../Image/logo.png" alt="Strik3r Logo">
+  </a>
+</div>
 </style>
 
 <nav class="navbar">
