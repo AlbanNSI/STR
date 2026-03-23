@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Produits – Strik3r</title>
-
-<link rel="stylesheet" href="../index.css">
-<script src="../script_menu.js"></script>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../index.css">
+  <title> Produits – Strik3r</title>
+  <script src="../script_menu.js"></script>
 
 <style>
 
-body{
-margin:0;
-font-family:Arial;
+.insta {
+  width: 50px;
+  margin-top: 5px;
 }
 
-/* Logo flottant */
+/* Logo flottant en bas à droite */
 .logo-floating{
   position:fixed;
   bottom:20px;
@@ -29,162 +27,152 @@ font-family:Arial;
 
 .logo-floating img{
   height:40px;
-}
-
-/* Galerie */
-.gallery{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-  padding:40px;
-}
-
-/* Carte */
-.card{
-  width:320px;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 6px 20px rgba(0,0,0,0.3);
-  background:white;
-  text-align:center;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:scale(1.05);
-}
-
-/* Image */
-.card img{
-  width:100%;
-  height:350px;
-  object-fit:cover;
-}
-
-/* Texte (IMPORTANT FIX) */
-.card p{
-  padding:15px;
-  font-size:16px;
-  color:black; /* 🔥 force le texte en noir */
-}
-
-/* Bouton haut */
-.scroll-btn{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:white;
-  border:none;
-  padding:10px;
-  border-radius:50%;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  cursor:pointer;
-  z-index:9999;
+  display:block;
 }
 
 </style>
 
 </head>
-
+  
 <body>
 
 <!-- Logo flottant -->
 <div class="logo-floating">
   <a href="../index.html">
-    <img src="../Image/logo.png">
+    <img src="../Image/logo.png" alt="Strik3r Logo">
   </a>
 </div>
 
-<!-- Menu -->
 <nav class="navbar">
-  <div class="burger" onclick="toggleMenu()">☰</div>
+        <div class="burger" onclick="toggleMenu()">☰</div>
 </nav>
 
 <aside id="menu-lateral" class="menu-lateral">
   <div class="menu-header">
-    <span onclick="closeMenu()">✕</span>
+    <span class="close-arrow" onclick="closeMenu()">✕</span>
   </div>
   <ul>
     <li><a href="../index.html">Accueil</a></li>
     <li><a href="../Actualite/actualite.html">Actualité</a></li>
     <li><a href="../Valeurs/valeurs.html">Valeurs</a></li>
-    <li><a href="../A_propos/A_propos.html">À propos</a></li>
+    <li><a href="../A_propos/A_propos.html">À propos de nous</a></li>
   </ul>
 </aside>
 
-<!-- HEADER -->
 <center>
 
-<img src="../Image/image_produit.gif"
-style="width:60%; border-radius:15px; margin-top:20px;">
+  <img src="../Image/image_produit.gif" alt="Animation produit"
+     style="
+       display:block;
+       margin:auto;
+       width:50%;
+       border-radius:15px;
+     ">
 
-<h1>Votre but à portée de main</h1>
+  <h1><font size="10" class="slogan">Votre but à portée de main</font></h1>
 
 </center>
 
-<!-- IMAGE PRINCIPALE -->
-<img src="../Image/boite_general.png"
-style="width:50%; display:block; margin:40px auto; border-radius:15px;">
+<body style="margin:0;">
+
+  
+<img src="../Image/boite_general.png" alt="Image principale"
+ style="
+   width:50%;
+   height:100%;
+   object-fit:cover;
+   display:block;
+   margin:auto;
+   border-radius:15px;  
+ ">
 
 <center>
-<h1>Le contenu de notre kit</h1>
+  <h1><font size="10" class="slogan">Le contenu de notre kit </font></h1>
 </center>
 
-<!-- CARTES -->
-<main class="gallery">
+<main class="gallery" style="
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:20px;
+">
 
-<div class="card">
-<img src="../Image/image1.jpg">
-<p>Un bloc-notes, idéal pour écrire ses idées, préparer son voyage ou noter ses souvenirs une fois sur place.</p>
+
+
+<div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
+<img src="../Image/image1.jpg" alt="" 
+ style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
+<center><div class="overlay-text">Un bloc-notes, idéal pour écrire ses idées, préparer son voyage ou noter ses souvenirs une fois sur place.</div></center>
 </div>
 
-<div class="card">
-<img src="../Image/55ab69f8-89b8-4bb5-a091-6a6dbde48cfa.jpeg">
-<p>Un livret qui propose aux voyageurs plusieurs pays à découvrir, avec une présentation pour chacun.</p>
+<div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
+<img src="../Image/55ab69f8-89b8-4bb5-a091-6a6dbde48cfa.jpeg" alt="" 
+ style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
+<center><div class="overlay-text">Un livret qui propose aux voyageurs plusieurs pays à découvrir, avec une petite présentation pour chacun avant de partir à l'aventure.</div></center>
 </div>
 
-<div class="card">
-<img src="../Image/image3.jpg">
-<p>Un objet anti-stress pour les moments d’attente ou de préparation du voyage.</p>
+<div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
+<img src="../Image/image3.jpg" alt="" 
+ style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
+<center><div class="overlay-text">Pour les moments de stress (préparer sa valise, attendre l'attendre l'avion ou même survivre à un controle surprise), nous avons ajouté un objet anti-stress.</div></center>
 </div>
 
-<div class="card">
-<img src="../Image/image3.jpg">
-<p>Une housse étanche fabriquée à partir de toile de parapluie recyclé.</p>
+<div class="card" style="position:relative; border-radius:15px; overflow:hidden;">
+<img src="../Image/image3.jpg" alt="" 
+ style="width:250px; height:350px; object-fit:cover; border-radius:15px;">
+<center><div class="overlay-text">Tout le kit est rangé dans une housse étanche fabriquée à partir de toile de parapluie recyclé.</div></center>
 </div>
 
 </main>
 
-<!-- Bouton -->
-<button class="scroll-btn" onclick="scrollToTop()">
-<img src="../Image/fleche.png" style="width:30px;">
-</button>
 
-<!-- FOOTER -->
-<footer style="text-align:center; padding:40px;">
+<button onclick="scrollToTop()" 
+style="
+position:fixed;
+bottom:20px;
+left:20px;
+z-index:9999;
+background:white;
+border:none;
+padding:10px;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+cursor:pointer;
+">
+
+<img src="../Image/fleche.png" alt="Retour en haut" style="width:30px;">
+
+</button>
+  
+<footer>
 
 <h3>CONTACT</h3>
 
-<p>Email :
-<a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a>
-</p>
+<p>Email : <a href="mailto:strik3r@saint-thom.fr">strik3r@saint-thom.fr</a></p>
 
-<p>
-<a href="https://instagram.com/strik3r2025">
-<img src="../Image/instagram.png" style="width:40px;">
+<p class="social">
+<a href="https://instagram.com/strik3r2025" target="_blank">
+<img src="../Image/instagram.png" class="insta">
 Instagram : strik3r2025
 </a>
 </p>
 
+<a href="https://www.google.com/maps?q=Lyc%C3%A9e+Saint-Thomas+d'Aquin+56+Rue+du+Perron+69600+Oullins&output=embed">
 <p>
-Adresse : 56/70 Rue du Perron<br>
-69600 Oullins-Pierre-Bénite
+Adresse : 56/70 Rue du Perron  
+<br>69600 Oullins-Pierre-Bénite, France
 </p>
+</a>
 
-<p>© 2025 — Tous droits réservés</p>
+<div class="copyright">
+© 2025 — Tous droits réservés
+</div>
 
 </footer>
 
 </body>
 </html>
+
+
+
