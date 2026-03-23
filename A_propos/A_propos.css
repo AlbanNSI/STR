@@ -4,16 +4,19 @@ body {
   background: #e4e4e4;
   color: black;
 }
+.p4{
+  font-size : 30px;
+}
 .img4{
-  width : 400px;
+  width : 40%;
 }
 h1{
   font-family : "Arial";
-  color : #ffffff;
+  color : #082640;
   font-size : 45px;
 }
 .entete h1{
-  color:#ffffff;
+  color:#082640;
   font-weight: bold;
 }
 .entete h2{
@@ -443,9 +446,6 @@ footer a:hover {
 .map-section h2 {
   margin-bottom: 60px;
 }
-
-
-
 
 
 
